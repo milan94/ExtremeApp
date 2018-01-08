@@ -14,48 +14,10 @@ namespace ExtremeIS
     {
         public MainForm()
         {
+
             InitializeComponent();
         }
-
-        private void lblFeeMonth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxFreeOfCharge_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnDailyTicket_Click(object sender, EventArgs e)
         {
@@ -63,34 +25,16 @@ namespace ExtremeIS
             dailyTicket.Show();
         }
 
-        private void btnNewMember_Click(object sender, EventArgs e)
-        {
-            var newMember = new AddMemberForm();
-            newMember.Show();
-        }
-
-        private void btnGearRenting_Click(object sender, EventArgs e)
-        {
-            var newBorrowing = new BorrowGearForm();
-            newBorrowing.Show();
-        }
-
-        private void btnGearBorrowing_Click(object sender, EventArgs e)
-        {
-            var newRenting = new RentGearForm();
-            newRenting.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var newMember = new AddMemberForm();
-            newMember.Show();
-        }
 
         private void btnMemberLogin_Click(object sender, EventArgs e)
         {
             var memberCheckIn = new MemberCheckIn();
             memberCheckIn.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
