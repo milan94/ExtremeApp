@@ -45,87 +45,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddGearForm.cs">
+    <Compile Include="Forms\AddGearForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGearForm.Designer.cs">
+    <Compile Include="Forms\AddGearForm.Designer.cs">
       <DependentUpon>AddGearForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMemberForm.cs">
+    <Compile Include="Forms\AddMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMemberForm.Designer.cs">
+    <Compile Include="Forms\AddMemberForm.Designer.cs">
       <DependentUpon>AddMemberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowGearForm.cs">
+    <Compile Include="Forms\BorrowGearForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorrowGearForm.Designer.cs">
+    <Compile Include="Forms\BorrowGearForm.Designer.cs">
       <DependentUpon>BorrowGearForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DailyTicketForm.cs">
+    <Compile Include="Forms\DailyTicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DailyTicketForm.Designer.cs">
+    <Compile Include="Forms\DailyTicketForm.Designer.cs">
       <DependentUpon>DailyTicketForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GearTabMainForm.cs">
+    <Compile Include="Forms\TabGearMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCheckIn.cs">
+    <Compile Include="Forms\MemberCheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberCheckIn.Designer.cs">
+    <Compile Include="Forms\MemberCheckIn.Designer.cs">
       <DependentUpon>MemberCheckIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="MembersTabMainForm.cs">
+    <Compile Include="Forms\TabMembersMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RentGearForm.cs">
+    <Compile Include="Forms\RentGearForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RentGearForm.Designer.cs">
+    <Compile Include="Forms\RentGearForm.Designer.cs">
       <DependentUpon>RentGearForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportsTabMainForm.cs">
+    <Compile Include="Forms\TabReportsMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScheduleTabMainForm.cs">
+    <Compile Include="Forms\TabScheduleMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="AddGearForm.resx">
+    <EmbeddedResource Include="Forms\AddGearForm.resx">
       <DependentUpon>AddGearForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddMemberForm.resx">
+    <EmbeddedResource Include="Forms\AddMemberForm.resx">
       <DependentUpon>AddMemberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowGearForm.resx">
+    <EmbeddedResource Include="Forms\BorrowGearForm.resx">
       <DependentUpon>BorrowGearForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DailyTicketForm.resx">
+    <EmbeddedResource Include="Forms\DailyTicketForm.resx">
       <DependentUpon>DailyTicketForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberCheckIn.resx">
+    <EmbeddedResource Include="Forms\MemberCheckIn.resx">
       <DependentUpon>MemberCheckIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -137,7 +137,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RentGearForm.resx">
+    <EmbeddedResource Include="Forms\RentGearForm.resx">
       <DependentUpon>RentGearForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -152,6 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="resrcs\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
