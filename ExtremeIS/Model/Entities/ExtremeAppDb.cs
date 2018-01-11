@@ -1,4 +1,4 @@
-namespace ExtremeIS
+namespace ExtremeIS.Model.Entities
 {
     using System;
     using System.Data.Entity;

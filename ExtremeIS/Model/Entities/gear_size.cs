@@ -1,4 +1,4 @@
-namespace ExtremeIS
+namespace ExtremeIS.Model.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,26 +6,23 @@ namespace ExtremeIS
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("informacioni_db.manufacturer")]
-    public partial class manufacturer
+    [Table("informacioni_db.gear_size")]
+    public partial class gear_size
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public manufacturer()
+        public gear_size()
         {
-            gears = new HashSet<gear>();
+            gear_size_items = new HashSet<gear_size_items>();
         }
 
         [Key]
-        public int manufacturer_id { get; set; }
+        public int gear_size_id { get; set; }
 
         [Required]
-        [StringLength(45)]
-        public string name { get; set; }
-
-        [StringLength(200)]
-        public string logo { get; set; }
+        [StringLength(10)]
+        public string value { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gear> gears { get; set; }
+        public virtual ICollection<gear_size_items> gear_size_items { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-namespace ExtremeIS
+namespace ExtremeIS.Model.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,23 +6,27 @@ namespace ExtremeIS
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("informacioni_db.education_level")]
-    public partial class education_level
+    [Table("informacioni_db.daily_ticket_type")]
+    public partial class daily_ticket_type
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public education_level()
+        public daily_ticket_type()
         {
-            members = new HashSet<member>();
+            daily_ticket = new HashSet<daily_ticket>();
         }
 
         [Key]
-        public int education_level_id { get; set; }
+        public int daily_ticket_type_id { get; set; }
 
         [Required]
         [StringLength(45)]
         public string name { get; set; }
 
+        public decimal price { get; set; }
+
+        public DateTime? last_modified { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<member> members { get; set; }
+        public virtual ICollection<daily_ticket> daily_ticket { get; set; }
     }
 }

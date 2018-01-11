@@ -1,4 +1,4 @@
-namespace ExtremeIS
+namespace ExtremeIS.Model.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,8 +6,8 @@ namespace ExtremeIS
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("informacioni_db.gear_borrowing_items")]
-    public partial class gear_borrowing_items
+    [Table("informacioni_db.gear_rental_items")]
+    public partial class gear_rental_items
     {
         [Key]
         [Column(Order = 0)]
@@ -22,13 +22,12 @@ namespace ExtremeIS
         [Key]
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int gear_borrowing_id { get; set; }
+        public int gear_rental_id { get; set; }
 
-        [Required]
         [StringLength(45)]
         public string quantity { get; set; }
 
-        public virtual gear_borrowing gear_borrowing { get; set; }
+        public virtual gear_rental gear_rental { get; set; }
 
         public virtual gear_size_items gear_size_items { get; set; }
     }
