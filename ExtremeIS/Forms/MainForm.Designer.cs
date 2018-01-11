@@ -1,4 +1,4 @@
-﻿namespace ExtremeIS
+﻿namespace ExtremeIS.Forms
 {
     partial class MainForm
     {
@@ -188,7 +188,7 @@
             this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 489);
             this.panel1.TabIndex = 1;
@@ -197,7 +197,7 @@
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(51, 457);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(56, 19);
             this.btnLogout.TabIndex = 5;
@@ -251,7 +251,7 @@
             // 
             this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
             this.picBoxLogo.Location = new System.Drawing.Point(20, 33);
-            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxLogo.Name = "picBoxLogo";
             this.picBoxLogo.Size = new System.Drawing.Size(126, 52);
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +269,7 @@
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(110, 30);
             this.tabControl1.Location = new System.Drawing.Point(161, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 3);
             this.tabControl1.SelectedIndex = 0;
@@ -281,9 +281,9 @@
             this.tabGym.Controls.Add(this.panelAttendance);
             this.tabGym.Controls.Add(this.panelLogin);
             this.tabGym.Location = new System.Drawing.Point(4, 34);
-            this.tabGym.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabGym.Margin = new System.Windows.Forms.Padding(2);
             this.tabGym.Name = "tabGym";
-            this.tabGym.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabGym.Padding = new System.Windows.Forms.Padding(2);
             this.tabGym.Size = new System.Drawing.Size(765, 451);
             this.tabGym.TabIndex = 0;
             this.tabGym.Text = "Penjačka sala";
@@ -296,7 +296,7 @@
             this.panelAttendance.Controls.Add(this.panelAttendanceTop);
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelAttendance.Location = new System.Drawing.Point(403, 2);
-            this.panelAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.panelAttendance.Name = "panelAttendance";
             this.panelAttendance.Size = new System.Drawing.Size(360, 447);
             this.panelAttendance.TabIndex = 1;
@@ -307,7 +307,7 @@
             this.tableAttendance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableAttendance.Location = new System.Drawing.Point(0, 55);
-            this.tableAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.tableAttendance.Name = "tableAttendance";
             this.tableAttendance.RowCount = 10;
             this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
@@ -329,7 +329,7 @@
             this.panelAttendanceTop.Controls.Add(this.lblAttendance);
             this.panelAttendanceTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAttendanceTop.Location = new System.Drawing.Point(0, 0);
-            this.panelAttendanceTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAttendanceTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelAttendanceTop.Name = "panelAttendanceTop";
             this.panelAttendanceTop.Size = new System.Drawing.Size(360, 55);
             this.panelAttendanceTop.TabIndex = 0;
@@ -354,7 +354,7 @@
             this.panelLogin.Controls.Add(this.lblMemberLogin);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogin.Location = new System.Drawing.Point(2, 2);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(381, 447);
             this.panelLogin.TabIndex = 0;
@@ -362,7 +362,7 @@
             // textBoxMemberLogin
             // 
             this.textBoxMemberLogin.Location = new System.Drawing.Point(77, 210);
-            this.textBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMemberLogin.Name = "textBoxMemberLogin";
             this.textBoxMemberLogin.Size = new System.Drawing.Size(204, 19);
             this.textBoxMemberLogin.TabIndex = 4;
@@ -370,7 +370,7 @@
             // btnDailyTicket
             // 
             this.btnDailyTicket.Location = new System.Drawing.Point(77, 286);
-            this.btnDailyTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDailyTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btnDailyTicket.Name = "btnDailyTicket";
             this.btnDailyTicket.Size = new System.Drawing.Size(202, 25);
             this.btnDailyTicket.TabIndex = 3;
@@ -381,7 +381,7 @@
             // btnMemberLogin
             // 
             this.btnMemberLogin.Location = new System.Drawing.Point(77, 233);
-            this.btnMemberLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberLogin.Name = "btnMemberLogin";
             this.btnMemberLogin.Size = new System.Drawing.Size(202, 48);
             this.btnMemberLogin.TabIndex = 2;
@@ -393,7 +393,7 @@
             // 
             this.picBoxMemberLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMemberLogin.Image")));
             this.picBoxMemberLogin.Location = new System.Drawing.Point(136, 116);
-            this.picBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxMemberLogin.Name = "picBoxMemberLogin";
             this.picBoxMemberLogin.Size = new System.Drawing.Size(75, 72);
             this.picBoxMemberLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -420,9 +420,9 @@
             this.tabMembers.Controls.Add(this.textBoxMember);
             this.tabMembers.Controls.Add(this.panelMember);
             this.tabMembers.Location = new System.Drawing.Point(4, 34);
-            this.tabMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMembers.Margin = new System.Windows.Forms.Padding(2);
             this.tabMembers.Name = "tabMembers";
-            this.tabMembers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMembers.Padding = new System.Windows.Forms.Padding(2);
             this.tabMembers.Size = new System.Drawing.Size(765, 451);
             this.tabMembers.TabIndex = 1;
             this.tabMembers.Text = "Članovi";
@@ -444,7 +444,7 @@
             this.panelMemberTable.Controls.Add(this.tableLayoutPanel1);
             this.panelMemberTable.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMemberTable.Location = new System.Drawing.Point(2, 173);
-            this.panelMemberTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMemberTable.Margin = new System.Windows.Forms.Padding(2);
             this.panelMemberTable.Name = "panelMemberTable";
             this.panelMemberTable.Size = new System.Drawing.Size(379, 276);
             this.panelMemberTable.TabIndex = 4;
@@ -456,7 +456,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -467,7 +467,7 @@
             // btnFindMember
             // 
             this.btnFindMember.Location = new System.Drawing.Point(34, 104);
-            this.btnFindMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFindMember.Margin = new System.Windows.Forms.Padding(2);
             this.btnFindMember.Name = "btnFindMember";
             this.btnFindMember.Size = new System.Drawing.Size(156, 31);
             this.btnFindMember.TabIndex = 3;
@@ -479,7 +479,7 @@
             // 
             this.btnNewMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewMember.Location = new System.Drawing.Point(230, 45);
-            this.btnNewMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNewMember.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewMember.Name = "btnNewMember";
             this.btnNewMember.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNewMember.Size = new System.Drawing.Size(112, 90);
@@ -492,7 +492,7 @@
             // textBoxMember
             // 
             this.textBoxMember.Location = new System.Drawing.Point(34, 72);
-            this.textBoxMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMember.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMember.Name = "textBoxMember";
             this.textBoxMember.Size = new System.Drawing.Size(157, 19);
             this.textBoxMember.TabIndex = 1;
@@ -502,7 +502,7 @@
             this.panelMember.Controls.Add(this.tabMemberInfo);
             this.panelMember.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelMember.Location = new System.Drawing.Point(381, 2);
-            this.panelMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMember.Margin = new System.Windows.Forms.Padding(2);
             this.panelMember.Name = "panelMember";
             this.panelMember.Size = new System.Drawing.Size(382, 447);
             this.panelMember.TabIndex = 0;
@@ -515,7 +515,7 @@
             this.tabMemberInfo.Controls.Add(this.tabPageInitial);
             this.tabMemberInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMemberInfo.Location = new System.Drawing.Point(0, 0);
-            this.tabMemberInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabMemberInfo.Name = "tabMemberInfo";
             this.tabMemberInfo.SelectedIndex = 0;
             this.tabMemberInfo.Size = new System.Drawing.Size(382, 447);
@@ -529,9 +529,9 @@
             this.tabPageProfile.Controls.Add(this.btnChangeProfile);
             this.tabPageProfile.Controls.Add(this.pictureBox7);
             this.tabPageProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabPageProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageProfile.Name = "tabPageProfile";
-            this.tabPageProfile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageProfile.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageProfile.Size = new System.Drawing.Size(374, 421);
             this.tabPageProfile.TabIndex = 0;
             this.tabPageProfile.Text = "Profil korisnika";
@@ -546,9 +546,9 @@
             this.groupBox2.Controls.Add(this.lblEducationLevel);
             this.groupBox2.Controls.Add(this.lblRegistrationDate);
             this.groupBox2.Location = new System.Drawing.Point(238, 246);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(123, 159);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
@@ -641,9 +641,9 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Location = new System.Drawing.Point(14, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(210, 389);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
@@ -836,7 +836,7 @@
             // btnChangeProfile
             // 
             this.btnChangeProfile.Location = new System.Drawing.Point(238, 206);
-            this.btnChangeProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangeProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeProfile.Name = "btnChangeProfile";
             this.btnChangeProfile.Size = new System.Drawing.Size(123, 24);
             this.btnChangeProfile.TabIndex = 10;
@@ -848,7 +848,7 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(238, 23);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(123, 171);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -865,10 +865,10 @@
             this.tabPageAttendance.Controls.Add(this.pictureBox5);
             this.tabPageAttendance.Controls.Add(this.pictureBox6);
             this.tabPageAttendance.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAttendance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAttendance.Name = "tabPageAttendance";
-            this.tabPageAttendance.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageAttendance.Size = new System.Drawing.Size(374, 433);
+            this.tabPageAttendance.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageAttendance.Size = new System.Drawing.Size(374, 421);
             this.tabPageAttendance.TabIndex = 1;
             this.tabPageAttendance.Text = "Prisustva";
             this.tabPageAttendance.UseVisualStyleBackColor = true;
@@ -908,7 +908,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(80, 131);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
@@ -929,7 +929,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(30, 21);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -940,7 +940,7 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(300, 16);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 44);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -955,10 +955,10 @@
             this.tabPageFees.Controls.Add(this.groupBoxFeeStatistics);
             this.tabPageFees.Controls.Add(this.groupBoxFeePaying);
             this.tabPageFees.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFees.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageFees.Name = "tabPageFees";
-            this.tabPageFees.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageFees.Size = new System.Drawing.Size(374, 433);
+            this.tabPageFees.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageFees.Size = new System.Drawing.Size(374, 421);
             this.tabPageFees.TabIndex = 2;
             this.tabPageFees.Text = "Članarine";
             this.tabPageFees.UseVisualStyleBackColor = true;
@@ -967,7 +967,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(289, 5);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 61);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -978,7 +978,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(30, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1006,9 +1006,9 @@
             this.groupBoxFeeStatistics.Controls.Add(this.lblLastFee);
             this.groupBoxFeeStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFeeStatistics.Location = new System.Drawing.Point(25, 284);
-            this.groupBoxFeeStatistics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxFeeStatistics.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxFeeStatistics.Name = "groupBoxFeeStatistics";
-            this.groupBoxFeeStatistics.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxFeeStatistics.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxFeeStatistics.Size = new System.Drawing.Size(333, 115);
             this.groupBoxFeeStatistics.TabIndex = 1;
             this.groupBoxFeeStatistics.TabStop = false;
@@ -1072,9 +1072,9 @@
             this.groupBoxFeePaying.Controls.Add(this.btnSubmitPayment);
             this.groupBoxFeePaying.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFeePaying.Location = new System.Drawing.Point(25, 67);
-            this.groupBoxFeePaying.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxFeePaying.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxFeePaying.Name = "groupBoxFeePaying";
-            this.groupBoxFeePaying.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxFeePaying.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxFeePaying.Size = new System.Drawing.Size(333, 202);
             this.groupBoxFeePaying.TabIndex = 0;
             this.groupBoxFeePaying.TabStop = false;
@@ -1109,7 +1109,7 @@
             this.checkBoxFreeOfCharge.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBoxFreeOfCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxFreeOfCharge.Location = new System.Drawing.Point(266, 95);
-            this.checkBoxFreeOfCharge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxFreeOfCharge.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxFreeOfCharge.Name = "checkBoxFreeOfCharge";
             this.checkBoxFreeOfCharge.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFreeOfCharge.TabIndex = 7;
@@ -1154,7 +1154,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(140, 61);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(140, 21);
             this.comboBox3.TabIndex = 2;
@@ -1163,7 +1163,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(140, 36);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(140, 21);
             this.comboBox2.TabIndex = 1;
@@ -1171,7 +1171,7 @@
             // btnSubmitPayment
             // 
             this.btnSubmitPayment.Location = new System.Drawing.Point(140, 155);
-            this.btnSubmitPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmitPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitPayment.Name = "btnSubmitPayment";
             this.btnSubmitPayment.Size = new System.Drawing.Size(140, 27);
             this.btnSubmitPayment.TabIndex = 0;
@@ -1185,10 +1185,10 @@
             this.tabPageInitial.Controls.Add(this.lblInitialText);
             this.tabPageInitial.Controls.Add(this.pictureBox2);
             this.tabPageInitial.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInitial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInitial.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageInitial.Name = "tabPageInitial";
-            this.tabPageInitial.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageInitial.Size = new System.Drawing.Size(374, 433);
+            this.tabPageInitial.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageInitial.Size = new System.Drawing.Size(374, 421);
             this.tabPageInitial.TabIndex = 3;
             // 
             // lblInitialText
@@ -1206,7 +1206,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(121, 114);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 171);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1223,7 +1223,7 @@
             this.tabGear.Controls.Add(this.lblGearSearchTerm);
             this.tabGear.Controls.Add(this.btnSearch);
             this.tabGear.Location = new System.Drawing.Point(4, 34);
-            this.tabGear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabGear.Margin = new System.Windows.Forms.Padding(2);
             this.tabGear.Name = "tabGear";
             this.tabGear.Size = new System.Drawing.Size(765, 451);
             this.tabGear.TabIndex = 2;
@@ -1251,7 +1251,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(52, 137);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 19);
             this.textBox1.TabIndex = 7;
@@ -1261,7 +1261,7 @@
             // btnReduceAmount
             // 
             this.btnReduceAmount.Location = new System.Drawing.Point(16, 136);
-            this.btnReduceAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReduceAmount.Margin = new System.Windows.Forms.Padding(2);
             this.btnReduceAmount.Name = "btnReduceAmount";
             this.btnReduceAmount.Size = new System.Drawing.Size(26, 22);
             this.btnReduceAmount.TabIndex = 6;
@@ -1272,7 +1272,7 @@
             // btnIncreaseAmount
             // 
             this.btnIncreaseAmount.Location = new System.Drawing.Point(100, 136);
-            this.btnIncreaseAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncreaseAmount.Margin = new System.Windows.Forms.Padding(2);
             this.btnIncreaseAmount.Name = "btnIncreaseAmount";
             this.btnIncreaseAmount.Size = new System.Drawing.Size(26, 22);
             this.btnIncreaseAmount.TabIndex = 5;
@@ -1351,7 +1351,7 @@
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanelGear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanelGear.Location = new System.Drawing.Point(0, 252);
             this.tableLayoutPanelGear.Name = "tableLayoutPanelGear";
@@ -1415,7 +1415,7 @@
             // tabReports
             // 
             this.tabReports.Location = new System.Drawing.Point(4, 34);
-            this.tabReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabReports.Margin = new System.Windows.Forms.Padding(2);
             this.tabReports.Name = "tabReports";
             this.tabReports.Size = new System.Drawing.Size(765, 451);
             this.tabReports.TabIndex = 3;
@@ -1426,9 +1426,9 @@
             // 
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(765, 451);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Rasporedi";
@@ -1438,7 +1438,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(63, 38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(651, 396);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1454,7 +1454,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "PK Extreme";

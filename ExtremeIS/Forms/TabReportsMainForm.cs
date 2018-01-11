@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExtremeIS
+namespace ExtremeIS.Forms
 {
     public partial class MainForm
     {
