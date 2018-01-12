@@ -5,9 +5,9 @@ namespace ExtremeIS.Model.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ExtremeAppDb : DbContext
+    public partial class ExtremeAppContext : DbContext
     {
-        public ExtremeAppDb()
+        public ExtremeAppContext()
             : base("name=ExtremeAppDb")
         {
         }

@@ -1,4 +1,5 @@
-﻿namespace ExtremeIS.Forms
+﻿using System;
+namespace ExtremeIS.Forms
 {
     partial class MainForm
     {
@@ -52,7 +53,7 @@
             this.tabMembers = new System.Windows.Forms.TabPage();
             this.lblFindTerm = new System.Windows.Forms.Label();
             this.panelMemberTable = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
             this.btnFindMember = new System.Windows.Forms.Button();
             this.btnNewMember = new System.Windows.Forms.Button();
             this.textBoxMember = new System.Windows.Forms.TextBox();
@@ -60,37 +61,37 @@
             this.tabMemberInfo = new System.Windows.Forms.TabControl();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblMembershipTypeProfileView = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEducationLevelProfileView = new System.Windows.Forms.Label();
+            this.lblRegistrationDateProfileView = new System.Windows.Forms.Label();
             this.lblEducationLevel = new System.Windows.Forms.Label();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblFirstNameProfileView = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblEmailProfileView = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPhoneNumberProfileView = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblAddressProfileView = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblBirthDateProfileView = new System.Windows.Forms.Label();
+            this.lblLastNameProfileView = new System.Windows.Forms.Label();
+            this.lblSexProfileView = new System.Windows.Forms.Label();
             this.btnChangeProfile = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabPageAttendance = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendarAttendance = new System.Windows.Forms.MonthCalendar();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -146,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMemberLogin)).BeginInit();
             this.tabMembers.SuspendLayout();
             this.panelMemberTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.panelMember.SuspendLayout();
             this.tabMemberInfo.SuspendLayout();
             this.tabPageProfile.SuspendLayout();
@@ -441,7 +443,7 @@
             // 
             // panelMemberTable
             // 
-            this.panelMemberTable.Controls.Add(this.tableLayoutPanel1);
+            this.panelMemberTable.Controls.Add(this.dataGridViewMembers);
             this.panelMemberTable.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMemberTable.Location = new System.Drawing.Point(2, 173);
             this.panelMemberTable.Margin = new System.Windows.Forms.Padding(2);
@@ -449,20 +451,16 @@
             this.panelMemberTable.Size = new System.Drawing.Size(379, 276);
             this.panelMemberTable.TabIndex = 4;
             // 
-            // tableLayoutPanel1
+            // dataGridViewMembers
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 276);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMembers.Location = new System.Drawing.Point(1, 4);
+            this.dataGridViewMembers.Name = "dataGridViewMembers";
+            this.dataGridViewMembers.ReadOnly = true;
+            this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMembers.Size = new System.Drawing.Size(376, 270);
+            this.dataGridViewMembers.TabIndex = 0;
+            this.dataGridViewMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMembers_CellClick);
             // 
             // btnFindMember
             // 
@@ -539,10 +537,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.lblMembershipTypeProfileView);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.lblEducationLevelProfileView);
+            this.groupBox2.Controls.Add(this.lblRegistrationDateProfileView);
             this.groupBox2.Controls.Add(this.lblEducationLevel);
             this.groupBox2.Controls.Add(this.lblRegistrationDate);
             this.groupBox2.Location = new System.Drawing.Point(238, 246);
@@ -554,16 +552,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Članstvo";
             // 
-            // label15
+            // lblMembershipTypeProfileView
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 129);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Stariji penjač";
+            this.lblMembershipTypeProfileView.AutoSize = true;
+            this.lblMembershipTypeProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembershipTypeProfileView.Location = new System.Drawing.Point(4, 129);
+            this.lblMembershipTypeProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMembershipTypeProfileView.Name = "lblMembershipTypeProfileView";
+            this.lblMembershipTypeProfileView.Size = new System.Drawing.Size(81, 13);
+            this.lblMembershipTypeProfileView.TabIndex = 27;
+            this.lblMembershipTypeProfileView.Text = "Stariji penjač";
             // 
             // label16
             // 
@@ -576,27 +574,27 @@
             this.label16.TabIndex = 26;
             this.label16.Text = "Kategorija:";
             // 
-            // label7
+            // lblEducationLevelProfileView
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 84);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "1";
+            this.lblEducationLevelProfileView.AutoSize = true;
+            this.lblEducationLevelProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEducationLevelProfileView.Location = new System.Drawing.Point(4, 84);
+            this.lblEducationLevelProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEducationLevelProfileView.Name = "lblEducationLevelProfileView";
+            this.lblEducationLevelProfileView.Size = new System.Drawing.Size(14, 13);
+            this.lblEducationLevelProfileView.TabIndex = 25;
+            this.lblEducationLevelProfileView.Text = "1";
             // 
-            // label8
+            // lblRegistrationDateProfileView
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 38);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "1.12.2017.";
+            this.lblRegistrationDateProfileView.AutoSize = true;
+            this.lblRegistrationDateProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrationDateProfileView.Location = new System.Drawing.Point(4, 38);
+            this.lblRegistrationDateProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistrationDateProfileView.Name = "lblRegistrationDateProfileView";
+            this.lblRegistrationDateProfileView.Size = new System.Drawing.Size(68, 13);
+            this.lblRegistrationDateProfileView.TabIndex = 24;
+            this.lblRegistrationDateProfileView.Text = "1.12.2017.";
             // 
             // lblEducationLevel
             // 
@@ -626,20 +624,20 @@
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.lblFirstNameProfileView);
             this.groupBox1.Controls.Add(this.lblFirstName);
             this.groupBox1.Controls.Add(this.lblLastName);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lblEmailProfileView);
             this.groupBox1.Controls.Add(this.lblGender);
             this.groupBox1.Controls.Add(this.lblBirthDate);
             this.groupBox1.Controls.Add(this.lblAddress);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lblPhoneNumberProfileView);
             this.groupBox1.Controls.Add(this.lblPhoneNumber);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblAddressProfileView);
             this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.lblBirthDateProfileView);
+            this.groupBox1.Controls.Add(this.lblLastNameProfileView);
+            this.groupBox1.Controls.Add(this.lblSexProfileView);
             this.groupBox1.Location = new System.Drawing.Point(14, 16);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -679,16 +677,16 @@
             this.label17.Size = new System.Drawing.Size(152, 2);
             this.label17.TabIndex = 20;
             // 
-            // label14
+            // lblFirstNameProfileView
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 51);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 20);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Mihajla";
+            this.lblFirstNameProfileView.AutoSize = true;
+            this.lblFirstNameProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstNameProfileView.Location = new System.Drawing.Point(25, 51);
+            this.lblFirstNameProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstNameProfileView.Name = "lblFirstNameProfileView";
+            this.lblFirstNameProfileView.Size = new System.Drawing.Size(65, 20);
+            this.lblFirstNameProfileView.TabIndex = 11;
+            this.lblFirstNameProfileView.Text = "Mihajla";
             // 
             // lblFirstName
             // 
@@ -712,16 +710,16 @@
             this.lblLastName.TabIndex = 1;
             this.lblLastName.Text = "Prezime:";
             // 
-            // label6
+            // lblEmailProfileView
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 359);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "climbеr@extremebl.com";
+            this.lblEmailProfileView.AutoSize = true;
+            this.lblEmailProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailProfileView.Location = new System.Drawing.Point(28, 359);
+            this.lblEmailProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailProfileView.Name = "lblEmailProfileView";
+            this.lblEmailProfileView.Size = new System.Drawing.Size(140, 13);
+            this.lblEmailProfileView.TabIndex = 19;
+            this.lblEmailProfileView.Text = "climbеr@extremebl.com";
             // 
             // lblGender
             // 
@@ -756,16 +754,16 @@
             this.lblAddress.TabIndex = 4;
             this.lblAddress.Text = "Adresa:";
             // 
-            // label9
+            // lblPhoneNumberProfileView
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 316);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "066 666 888";
+            this.lblPhoneNumberProfileView.AutoSize = true;
+            this.lblPhoneNumberProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumberProfileView.Location = new System.Drawing.Point(28, 316);
+            this.lblPhoneNumberProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumberProfileView.Name = "lblPhoneNumberProfileView";
+            this.lblPhoneNumberProfileView.Size = new System.Drawing.Size(78, 13);
+            this.lblPhoneNumberProfileView.TabIndex = 16;
+            this.lblPhoneNumberProfileView.Text = "066 666 888";
             // 
             // lblPhoneNumber
             // 
@@ -778,16 +776,16 @@
             this.lblPhoneNumber.TabIndex = 5;
             this.lblPhoneNumber.Text = "Broj telefona:";
             // 
-            // label10
+            // lblAddressProfileView
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(28, 258);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 26);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Živojina Mišića 65, \r\nBanja Luka";
+            this.lblAddressProfileView.AutoSize = true;
+            this.lblAddressProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressProfileView.Location = new System.Drawing.Point(28, 258);
+            this.lblAddressProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddressProfileView.Name = "lblAddressProfileView";
+            this.lblAddressProfileView.Size = new System.Drawing.Size(118, 26);
+            this.lblAddressProfileView.TabIndex = 15;
+            this.lblAddressProfileView.Text = "Živojina Mišića 65, \r\nBanja Luka";
             // 
             // lblEmail
             // 
@@ -800,38 +798,38 @@
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Email:";
             // 
-            // label11
+            // lblBirthDateProfileView
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(27, 163);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "09.11.1989";
+            this.lblBirthDateProfileView.AutoSize = true;
+            this.lblBirthDateProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthDateProfileView.Location = new System.Drawing.Point(27, 163);
+            this.lblBirthDateProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirthDateProfileView.Name = "lblBirthDateProfileView";
+            this.lblBirthDateProfileView.Size = new System.Drawing.Size(71, 13);
+            this.lblBirthDateProfileView.TabIndex = 14;
+            this.lblBirthDateProfileView.Text = "09.11.1989";
             // 
-            // label13
+            // lblLastNameProfileView
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(26, 102);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 20);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Savić";
+            this.lblLastNameProfileView.AutoSize = true;
+            this.lblLastNameProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastNameProfileView.Location = new System.Drawing.Point(26, 102);
+            this.lblLastNameProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastNameProfileView.Name = "lblLastNameProfileView";
+            this.lblLastNameProfileView.Size = new System.Drawing.Size(52, 20);
+            this.lblLastNameProfileView.TabIndex = 12;
+            this.lblLastNameProfileView.Text = "Savić";
             // 
-            // label12
+            // lblSexProfileView
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(27, 204);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Ženski";
+            this.lblSexProfileView.AutoSize = true;
+            this.lblSexProfileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexProfileView.Location = new System.Drawing.Point(27, 204);
+            this.lblSexProfileView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSexProfileView.Name = "lblSexProfileView";
+            this.lblSexProfileView.Size = new System.Drawing.Size(45, 13);
+            this.lblSexProfileView.TabIndex = 13;
+            this.lblSexProfileView.Text = "Ženski";
             // 
             // btnChangeProfile
             // 
@@ -860,7 +858,7 @@
             this.tabPageAttendance.Controls.Add(this.label5);
             this.tabPageAttendance.Controls.Add(this.label4);
             this.tabPageAttendance.Controls.Add(this.label3);
-            this.tabPageAttendance.Controls.Add(this.monthCalendar1);
+            this.tabPageAttendance.Controls.Add(this.calendarAttendance);
             this.tabPageAttendance.Controls.Add(this.label2);
             this.tabPageAttendance.Controls.Add(this.pictureBox5);
             this.tabPageAttendance.Controls.Add(this.pictureBox6);
@@ -905,12 +903,13 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Pregled prisustava člana u sali:";
             // 
-            // monthCalendar1
+            // calendarAttendance
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(80, 131);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 9;
+            this.calendarAttendance.Location = new System.Drawing.Point(80, 131);
+            this.calendarAttendance.Margin = new System.Windows.Forms.Padding(7);
+            this.calendarAttendance.MaxDate = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
+            this.calendarAttendance.Name = "calendarAttendance";
+            this.calendarAttendance.TabIndex = 9;
             // 
             // label2
             // 
@@ -1351,7 +1350,7 @@
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanelGear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanelGear.Location = new System.Drawing.Point(0, 252);
             this.tableLayoutPanelGear.Name = "tableLayoutPanelGear";
@@ -1472,6 +1471,7 @@
             this.tabMembers.ResumeLayout(false);
             this.tabMembers.PerformLayout();
             this.panelMemberTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.panelMember.ResumeLayout(false);
             this.tabMemberInfo.ResumeLayout(false);
             this.tabPageProfile.ResumeLayout(false);
@@ -1550,8 +1550,6 @@
         private System.Windows.Forms.Button btnNewMember;
         private System.Windows.Forms.TextBox textBoxMember;
         private System.Windows.Forms.Panel panelMember;
-        private System.Windows.Forms.Panel panelMemberTable;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TabControl tabMemberInfo;
         private System.Windows.Forms.TabPage tabPageProfile;
         private System.Windows.Forms.TabPage tabPageAttendance;
@@ -1581,7 +1579,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar calendarAttendance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -1594,19 +1592,19 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btnChangeProfile;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblEmailProfileView;
+        private System.Windows.Forms.Label lblPhoneNumberProfileView;
+        private System.Windows.Forms.Label lblAddressProfileView;
+        private System.Windows.Forms.Label lblBirthDateProfileView;
+        private System.Windows.Forms.Label lblSexProfileView;
+        private System.Windows.Forms.Label lblLastNameProfileView;
+        private System.Windows.Forms.Label lblFirstNameProfileView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblMembershipTypeProfileView;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEducationLevelProfileView;
+        private System.Windows.Forms.Label lblRegistrationDateProfileView;
         private System.Windows.Forms.Label lblEducationLevel;
         private System.Windows.Forms.Label lblRegistrationDate;
         private System.Windows.Forms.Label label18;
@@ -1617,6 +1615,8 @@
         private System.Windows.Forms.Button btnIncreaseAmount;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelMemberTable;
+        private System.Windows.Forms.DataGridView dataGridViewMembers;
     }
 }
 

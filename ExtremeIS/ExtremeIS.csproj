@@ -38,8 +38,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -58,6 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AttendanceDAO.cs" />
+    <Compile Include="DAO\EducationLevelDAO.cs" />
+    <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\MembershipTypeDAO.cs" />
     <Compile Include="Forms\AddGearForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,7 +114,9 @@
     <Compile Include="Forms\TabReportsMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TabScheduleMainForm.cs" />
+    <Compile Include="Forms\TabScheduleMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Model\Entities\attendance.cs" />
     <Compile Include="Model\Entities\daily_ticket.cs" />
     <Compile Include="Model\Entities\daily_ticket_type.cs" />
@@ -187,7 +194,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="resrcs\" />
     <Folder Include="Utils\" />
   </ItemGroup>

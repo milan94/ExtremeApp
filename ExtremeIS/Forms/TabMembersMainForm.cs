@@ -16,18 +16,23 @@ namespace ExtremeIS.Forms
         private void btnNewMember_Click(object sender, EventArgs e)
         {
             var newMember = new AddMemberForm();
-            newMember.Show();
+            newMember.ShowDialog();
         }
 
         private void btnChangeProfile_Click(object sender, EventArgs e)
         {
-            var newMember = new AddMemberForm();
-            newMember.Show();
+            var newMember = new AddMemberForm(members[selectedMemberRowIndex]);
+            newMember.ShowDialog();
         }
 
         private void btnSubmitPayment_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void populateCalendar(int memberId)
+        {
+            
         }
     }
 }
