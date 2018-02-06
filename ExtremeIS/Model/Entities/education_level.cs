@@ -12,7 +12,7 @@ namespace ExtremeIS.Model.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public education_level()
         {
-            members = new HashSet<member>();
+            member_education = new HashSet<member_education>();
         }
 
         [Key]
@@ -23,6 +23,6 @@ namespace ExtremeIS.Model.Entities
         public string name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<member> members { get; set; }
+        public virtual ICollection<member_education> member_education { get; set; }
     }
 }

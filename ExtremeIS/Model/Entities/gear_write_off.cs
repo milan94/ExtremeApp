@@ -10,7 +10,6 @@ namespace ExtremeIS.Model.Entities
     public partial class gear_write_off
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int gear_write_off_id { get; set; }
 
         public int gear_id { get; set; }

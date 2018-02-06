@@ -16,7 +16,9 @@ namespace ExtremeIS.Model.Entities
 
         public DateTime check_in_time { get; set; }
 
-        public bool? is_stuff { get; set; }
+        public bool? is_staff { get; set; }
+
+        public bool? is_paid_for { get; set; }
 
         public virtual member member { get; set; }
     }

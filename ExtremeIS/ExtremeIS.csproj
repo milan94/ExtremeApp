@@ -32,11 +32,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.0.0.23, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.0.0.23\lib\net20\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
@@ -48,6 +65,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,13 +79,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AttendanceDAO.cs" />
+    <Compile Include="DAO\DailyTicketsDAO.cs" />
     <Compile Include="DAO\EducationLevelDAO.cs" />
+    <Compile Include="DAO\GearDAO.cs" />
     <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\MemberEducationDAO.cs" />
     <Compile Include="DAO\MembershipTypeDAO.cs" />
+    <Compile Include="DAO\MembershipFeePaymentDAO.cs" />
+    <Compile Include="DAO\UserAccountDAO.cs" />
+    <Compile Include="DTO\DailyTicketDTO.cs" />
+    <Compile Include="DTO\MemberAttendanceDTO.cs" />
+    <Compile Include="DTO\MemberAttendanceSummaryDTO.cs" />
+    <Compile Include="DTO\MemberFeeDTO.cs" />
     <Compile Include="Forms\AddGearForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddGearForm.Designer.cs">
+    <Compile Include="Forms\AddGearForm.designer.cs">
       <DependentUpon>AddGearForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddMemberForm.cs">
@@ -86,6 +114,12 @@
     </Compile>
     <Compile Include="Forms\DailyTicketForm.Designer.cs">
       <DependentUpon>DailyTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TabGearMainForm.cs">
       <SubType>Form</SubType>
@@ -117,17 +151,23 @@
     <Compile Include="Forms\TabScheduleMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MembershipCard\MembershipCardTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipCardTemplate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\attendance_list_member.cs" />
+    <Compile Include="Model\daily_ticket_type.cs" />
     <Compile Include="Model\Entities\attendance.cs" />
     <Compile Include="Model\Entities\daily_ticket.cs" />
     <Compile Include="Model\Entities\daily_ticket_type.cs" />
     <Compile Include="Model\Entities\education_level.cs" />
-    <Compile Include="Model\Entities\ExtremeAppDb.cs" />
+    <Compile Include="Model\Entities\ExtremeAppContext.cs" />
     <Compile Include="Model\Entities\gear.cs" />
     <Compile Include="Model\Entities\gear_borrowing.cs" />
     <Compile Include="Model\Entities\gear_borrowing_items.cs" />
     <Compile Include="Model\Entities\gear_category.cs" />
-    <Compile Include="Model\Entities\gear_rental.cs" />
-    <Compile Include="Model\Entities\gear_rental_items.cs" />
     <Compile Include="Model\Entities\gear_size.cs" />
     <Compile Include="Model\Entities\gear_size_items.cs" />
     <Compile Include="Model\Entities\gear_write_off.cs" />
@@ -135,9 +175,15 @@
     <Compile Include="Model\Entities\member.cs" />
     <Compile Include="Model\Entities\membership_card.cs" />
     <Compile Include="Model\Entities\membership_type.cs" />
+    <Compile Include="Model\Entities\member_education.cs" />
     <Compile Include="Model\Entities\membeship_fee_payment.cs" />
     <Compile Include="Model\Entities\user_account.cs" />
     <Compile Include="Model\Entities\user_log.cs" />
+    <Compile Include="Model\gear_category.cs" />
+    <Compile Include="Model\gear_detailed.cs" />
+    <Compile Include="Model\gear_size.cs" />
+    <Compile Include="Model\manufacturer.cs" />
+    <Compile Include="Model\member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\RentGearForm.cs">
@@ -146,6 +192,51 @@
     <Compile Include="Forms\RentGearForm.Designer.cs">
       <DependentUpon>RentGearForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBorrowingGear.cs">
+      <DependentUpon>rptBorrowingGear.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptGearTotal.cs">
+      <DependentUpon>rptGearTotal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMembershipFees.cs">
+      <DependentUpon>rptMembershipFees.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptDailyTickets.cs">
+      <DependentUpon>rptDailyTickets.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMembersAttendanceSummary.cs">
+      <DependentUpon>rptMembersAttendanceSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMembersAttendance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMembersAttendance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Utilities.cs" />
     <EmbeddedResource Include="Forms\AddGearForm.resx">
       <DependentUpon>AddGearForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +258,13 @@
     <EmbeddedResource Include="Forms\MemberCheckIn.resx">
       <DependentUpon>MemberCheckIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembershipCard\MembershipCardTemplate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipCardTemplate.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -175,9 +273,34 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\RentGearForm.resx">
       <DependentUpon>RentGearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBorrowingGear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBorrowingGear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptGearTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGearTotal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMembershipFees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMembershipFees.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailyTickets.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyTickets.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMembersAttendanceSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMembersAttendanceSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMembersAttendance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMembersAttendance.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -195,7 +318,41 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="resrcs\" />
-    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\defaultProfile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtremeLogo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\education.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kartica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultBarcode.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

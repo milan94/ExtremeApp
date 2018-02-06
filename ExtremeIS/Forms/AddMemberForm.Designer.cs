@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ExtremeIS
+namespace ExtremeIS.Forms
 {
     partial class AddMemberForm
     {
@@ -29,7 +29,6 @@ namespace ExtremeIS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMemberForm));
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@ namespace ExtremeIS
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.radioButtonSexMale = new System.Windows.Forms.RadioButton();
             this.radioButtonSexFemale = new System.Windows.Forms.RadioButton();
@@ -49,25 +47,32 @@ namespace ExtremeIS
             this.tabPageBasicInfo = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.lblMemberID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAddProfilePicture = new System.Windows.Forms.Button();
+            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.tabPageMembership = new System.Windows.Forms.TabPage();
+            this.pictureBoxBarcodeMembershipCard = new System.Windows.Forms.PictureBox();
+            this.lblLastNameMembershipCard = new System.Windows.Forms.Label();
+            this.lblFirstNameMembershipCard = new System.Windows.Forms.Label();
+            this.checkBoxActiveMember = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnGenerateMembershipCard = new System.Windows.Forms.Button();
             this.comboBoxMembershipType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxEducationLevel = new System.Windows.Forms.ComboBox();
             this.dateTimePickerRegistrationDate = new System.Windows.Forms.DateTimePicker();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
-            this.lblEducationLevel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblMemberIdMembershipCard = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageBasicInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).BeginInit();
             this.tabPageMembership.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcodeMembershipCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,26 +185,15 @@ namespace ExtremeIS
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(197, 20);
             this.textBoxPhoneNumber.TabIndex = 20;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(243, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // dateTimePickerBirthDate
             // 
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(23, 196);
             this.dateTimePickerBirthDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerBirthDate.MaxDate = DateTime.Today;
+            this.dateTimePickerBirthDate.MaxDate = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(202, 20);
             this.dateTimePickerBirthDate.TabIndex = 23;
-            this.dateTimePickerBirthDate.Value = dateTimePickerBirthDate.Value;
+            this.dateTimePickerBirthDate.Value = this.dateTimePickerBirthDate.Value;
             // 
             // radioButtonSexMale
             // 
@@ -242,9 +236,10 @@ namespace ExtremeIS
             // 
             this.tabPageBasicInfo.BackColor = System.Drawing.Color.White;
             this.tabPageBasicInfo.Controls.Add(this.groupBox1);
+            this.tabPageBasicInfo.Controls.Add(this.lblMemberID);
             this.tabPageBasicInfo.Controls.Add(this.label1);
-            this.tabPageBasicInfo.Controls.Add(this.button4);
-            this.tabPageBasicInfo.Controls.Add(this.pictureBox1);
+            this.tabPageBasicInfo.Controls.Add(this.btnAddProfilePicture);
+            this.tabPageBasicInfo.Controls.Add(this.pictureBoxProfilePicture);
             this.tabPageBasicInfo.Controls.Add(this.radioButtonSexFemale);
             this.tabPageBasicInfo.Controls.Add(this.lblFirstName);
             this.tabPageBasicInfo.Controls.Add(this.radioButtonSexMale);
@@ -287,6 +282,17 @@ namespace ExtremeIS
             this.textBoxEmail.Size = new System.Drawing.Size(197, 20);
             this.textBoxEmail.TabIndex = 27;
             // 
+            // lblMemberID
+            // 
+            this.lblMemberID.AutoSize = true;
+            this.lblMemberID.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblMemberID.Location = new System.Drawing.Point(86, 20);
+            this.lblMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMemberID.Name = "lblMemberID";
+            this.lblMemberID.Size = new System.Drawing.Size(12, 13);
+            this.lblMemberID.TabIndex = 29;
+            this.lblMemberID.Text = "/";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -294,31 +300,47 @@ namespace ExtremeIS
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 29;
-            this.label1.Text = "ID korisnika: 1845";
+            this.label1.Text = "ID korisnika:";
             // 
-            // button4
+            // btnAddProfilePicture
             // 
-            this.button4.Location = new System.Drawing.Point(243, 195);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 22);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Dodaj fotografiju";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAddProfilePicture.Location = new System.Drawing.Point(243, 195);
+            this.btnAddProfilePicture.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProfilePicture.Name = "btnAddProfilePicture";
+            this.btnAddProfilePicture.Size = new System.Drawing.Size(110, 22);
+            this.btnAddProfilePicture.TabIndex = 28;
+            this.btnAddProfilePicture.Text = "Dodaj fotografiju";
+            this.btnAddProfilePicture.UseVisualStyleBackColor = true;
+            this.btnAddProfilePicture.Click += new System.EventHandler(this.btnAddProfilePicture_Click);
+            // 
+            // pictureBoxProfilePicture
+            // 
+            this.pictureBoxProfilePicture.Image = global::ExtremeIS.Properties.Resources.user;
+            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(243, 50);
+            this.pictureBoxProfilePicture.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
+            this.pictureBoxProfilePicture.Size = new System.Drawing.Size(110, 141);
+            this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfilePicture.TabIndex = 22;
+            this.pictureBoxProfilePicture.TabStop = false;
             // 
             // tabPageMembership
             // 
+            this.tabPageMembership.Controls.Add(this.label4);
+            this.tabPageMembership.Controls.Add(this.lblMemberIdMembershipCard);
+            this.tabPageMembership.Controls.Add(this.pictureBoxBarcodeMembershipCard);
+            this.tabPageMembership.Controls.Add(this.lblLastNameMembershipCard);
+            this.tabPageMembership.Controls.Add(this.lblFirstNameMembershipCard);
+            this.tabPageMembership.Controls.Add(this.checkBoxActiveMember);
             this.tabPageMembership.Controls.Add(this.label3);
-            this.tabPageMembership.Controls.Add(this.pictureBox2);
-            this.tabPageMembership.Controls.Add(this.button5);
+            this.tabPageMembership.Controls.Add(this.btnGenerateMembershipCard);
             this.tabPageMembership.Controls.Add(this.comboBoxMembershipType);
             this.tabPageMembership.Controls.Add(this.label2);
-            this.tabPageMembership.Controls.Add(this.comboBoxEducationLevel);
             this.tabPageMembership.Controls.Add(this.dateTimePickerRegistrationDate);
             this.tabPageMembership.Controls.Add(this.lblRegistrationDate);
-            this.tabPageMembership.Controls.Add(this.lblEducationLevel);
+            this.tabPageMembership.Controls.Add(this.pictureBox2);
             this.tabPageMembership.Location = new System.Drawing.Point(4, 22);
             this.tabPageMembership.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageMembership.Name = "tabPageMembership";
@@ -327,6 +349,48 @@ namespace ExtremeIS
             this.tabPageMembership.TabIndex = 1;
             this.tabPageMembership.Text = "Članstvo";
             this.tabPageMembership.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxBarcodeMembershipCard
+            // 
+            this.pictureBoxBarcodeMembershipCard.Image = global::ExtremeIS.Properties.Resources.defaultBarcode;
+            this.pictureBoxBarcodeMembershipCard.Location = new System.Drawing.Point(206, 275);
+            this.pictureBoxBarcodeMembershipCard.Name = "pictureBoxBarcodeMembershipCard";
+            this.pictureBoxBarcodeMembershipCard.Size = new System.Drawing.Size(120, 45);
+            this.pictureBoxBarcodeMembershipCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBarcodeMembershipCard.TabIndex = 28;
+            this.pictureBoxBarcodeMembershipCard.TabStop = false;
+            // 
+            // lblLastNameMembershipCard
+            // 
+            this.lblLastNameMembershipCard.AutoSize = true;
+            this.lblLastNameMembershipCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastNameMembershipCard.Location = new System.Drawing.Point(53, 294);
+            this.lblLastNameMembershipCard.Name = "lblLastNameMembershipCard";
+            this.lblLastNameMembershipCard.Size = new System.Drawing.Size(79, 24);
+            this.lblLastNameMembershipCard.TabIndex = 27;
+            this.lblLastNameMembershipCard.Text = "Prezime";
+            // 
+            // lblFirstNameMembershipCard
+            // 
+            this.lblFirstNameMembershipCard.AutoSize = true;
+            this.lblFirstNameMembershipCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstNameMembershipCard.Location = new System.Drawing.Point(53, 268);
+            this.lblFirstNameMembershipCard.Name = "lblFirstNameMembershipCard";
+            this.lblFirstNameMembershipCard.Size = new System.Drawing.Size(41, 24);
+            this.lblFirstNameMembershipCard.TabIndex = 27;
+            this.lblFirstNameMembershipCard.Text = "Ime";
+            // 
+            // checkBoxActiveMember
+            // 
+            this.checkBoxActiveMember.AutoSize = true;
+            this.checkBoxActiveMember.Checked = true;
+            this.checkBoxActiveMember.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxActiveMember.Location = new System.Drawing.Point(159, 115);
+            this.checkBoxActiveMember.Name = "checkBoxActiveMember";
+            this.checkBoxActiveMember.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxActiveMember.TabIndex = 26;
+            this.checkBoxActiveMember.Text = "Aktivan";
+            this.checkBoxActiveMember.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -339,32 +403,22 @@ namespace ExtremeIS
             this.label3.TabIndex = 25;
             this.label3.Text = "Napomena: štamapnje karte je moguće po završetku registracije";
             // 
-            // pictureBox2
+            // btnGenerateMembershipCard
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 216);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(313, 126);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(26, 187);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Generiši člansku kartu";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnGenerateMembershipCard.Location = new System.Drawing.Point(26, 157);
+            this.btnGenerateMembershipCard.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerateMembershipCard.Name = "btnGenerateMembershipCard";
+            this.btnGenerateMembershipCard.Size = new System.Drawing.Size(133, 23);
+            this.btnGenerateMembershipCard.TabIndex = 23;
+            this.btnGenerateMembershipCard.Text = "Generiši člansku kartu";
+            this.btnGenerateMembershipCard.UseVisualStyleBackColor = true;
+            this.btnGenerateMembershipCard.Click += new System.EventHandler(this.btnGenerateMembershipCard_Click);
             // 
             // comboBoxMembershipType
             // 
             this.comboBoxMembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMembershipType.FormattingEnabled = true;
-            this.comboBoxMembershipType.Location = new System.Drawing.Point(159, 113);
+            this.comboBoxMembershipType.Location = new System.Drawing.Point(159, 78);
             this.comboBoxMembershipType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMembershipType.Name = "comboBoxMembershipType";
             this.comboBoxMembershipType.Size = new System.Drawing.Size(181, 21);
@@ -374,54 +428,46 @@ namespace ExtremeIS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 115);
+            this.label2.Location = new System.Drawing.Point(24, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Kategorija";
             // 
-            // comboBoxEducationLevel
-            // 
-            this.comboBoxEducationLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEducationLevel.FormattingEnabled = true;
-            this.comboBoxEducationLevel.Location = new System.Drawing.Point(159, 67);
-            this.comboBoxEducationLevel.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxEducationLevel.Name = "comboBoxEducationLevel";
-            this.comboBoxEducationLevel.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxEducationLevel.TabIndex = 20;
-            // 
             // dateTimePickerRegistrationDate
             // 
             this.dateTimePickerRegistrationDate.CustomFormat = "";
-            this.dateTimePickerRegistrationDate.Location = new System.Drawing.Point(159, 25);
+            this.dateTimePickerRegistrationDate.Location = new System.Drawing.Point(159, 35);
             this.dateTimePickerRegistrationDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerRegistrationDate.MaxDate = DateTime.Today;
+            this.dateTimePickerRegistrationDate.MaxDate = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
+            this.dateTimePickerRegistrationDate.MinDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerRegistrationDate.Name = "dateTimePickerRegistrationDate";
             this.dateTimePickerRegistrationDate.Size = new System.Drawing.Size(181, 20);
             this.dateTimePickerRegistrationDate.TabIndex = 19;
+            this.dateTimePickerRegistrationDate.Value = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
             // 
             // lblRegistrationDate
             // 
             this.lblRegistrationDate.AutoSize = true;
             this.lblRegistrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrationDate.Location = new System.Drawing.Point(24, 25);
+            this.lblRegistrationDate.Location = new System.Drawing.Point(24, 35);
             this.lblRegistrationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
             this.lblRegistrationDate.Size = new System.Drawing.Size(94, 13);
             this.lblRegistrationDate.TabIndex = 17;
             this.lblRegistrationDate.Text = "Datum registracije:";
             // 
-            // lblEducationLevel
+            // pictureBox2
             // 
-            this.lblEducationLevel.AutoSize = true;
-            this.lblEducationLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEducationLevel.Location = new System.Drawing.Point(24, 70);
-            this.lblEducationLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEducationLevel.Name = "lblEducationLevel";
-            this.lblEducationLevel.Size = new System.Drawing.Size(86, 13);
-            this.lblEducationLevel.TabIndex = 18;
-            this.lblEducationLevel.Text = "Penjački stepen:";
+            this.pictureBox2.Image = global::ExtremeIS.Properties.Resources.membershipCard;
+            this.pictureBox2.Location = new System.Drawing.Point(29, 193);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
             // 
             // btnAddMember
             // 
@@ -445,6 +491,27 @@ namespace ExtremeIS
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblMemberIdMembershipCard
+            // 
+            this.lblMemberIdMembershipCard.AutoSize = true;
+            this.lblMemberIdMembershipCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberIdMembershipCard.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblMemberIdMembershipCard.Location = new System.Drawing.Point(291, 252);
+            this.lblMemberIdMembershipCard.Name = "lblMemberIdMembershipCard";
+            this.lblMemberIdMembershipCard.Size = new System.Drawing.Size(31, 13);
+            this.lblMemberIdMembershipCard.TabIndex = 29;
+            this.lblMemberIdMembershipCard.Text = "1000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(262, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Čl.Br.:";
+            // 
             // AddMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,14 +523,16 @@ namespace ExtremeIS
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddMemberForm";
             this.Text = "Dodavnje novog člana";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.AddMemberForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageBasicInfo.ResumeLayout(false);
             this.tabPageBasicInfo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).EndInit();
             this.tabPageMembership.ResumeLayout(false);
             this.tabPageMembership.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcodeMembershipCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -482,27 +551,32 @@ namespace ExtremeIS
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxProfilePicture;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
         private System.Windows.Forms.RadioButton radioButtonSexMale;
         private System.Windows.Forms.RadioButton radioButtonSexFemale;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageBasicInfo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAddProfilePicture;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TabPage tabPageMembership;
-        private System.Windows.Forms.Label lblRegistrationDate;
-        private System.Windows.Forms.Label lblEducationLevel;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAddMember;
+        private System.Windows.Forms.TabPage tabPageMembership;
+        private System.Windows.Forms.CheckBox checkBoxActiveMember;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGenerateMembershipCard;
         private System.Windows.Forms.ComboBox comboBoxMembershipType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxEducationLevel;
         private System.Windows.Forms.DateTimePicker dateTimePickerRegistrationDate;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRegistrationDate;
+        private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnAddMember;
+        private System.Windows.Forms.PictureBox pictureBoxBarcodeMembershipCard;
+        private System.Windows.Forms.Label lblFirstNameMembershipCard;
+        private System.Windows.Forms.Label lblLastNameMembershipCard;
+        private System.Windows.Forms.Label lblMemberIdMembershipCard;
+        private System.Windows.Forms.Label label4;
     }
 }

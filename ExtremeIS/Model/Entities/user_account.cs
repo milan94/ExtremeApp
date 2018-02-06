@@ -15,8 +15,6 @@ namespace ExtremeIS.Model.Entities
             daily_ticket = new HashSet<daily_ticket>();
             gear_borrowing = new HashSet<gear_borrowing>();
             gear_borrowing1 = new HashSet<gear_borrowing>();
-            gear_rental = new HashSet<gear_rental>();
-            gear_rental1 = new HashSet<gear_rental>();
             gear_write_off = new HashSet<gear_write_off>();
             membership_card = new HashSet<membership_card>();
             membeship_fee_payment = new HashSet<membeship_fee_payment>();
@@ -24,7 +22,6 @@ namespace ExtremeIS.Model.Entities
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int user_account_id { get; set; }
 
         public int member_id { get; set; }
@@ -55,12 +52,6 @@ namespace ExtremeIS.Model.Entities
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gear_borrowing> gear_borrowing1 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gear_rental> gear_rental { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gear_rental> gear_rental1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gear_write_off> gear_write_off { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace ExtremeIS
+﻿namespace ExtremeIS.Forms
 {
     partial class RentGearForm
     {

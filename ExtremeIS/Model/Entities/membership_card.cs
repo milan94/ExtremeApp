@@ -10,7 +10,6 @@ namespace ExtremeIS.Model.Entities
     public partial class membership_card
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int membership_card_id { get; set; }
 
         public int member_id { get; set; }
@@ -18,7 +17,7 @@ namespace ExtremeIS.Model.Entities
         public int issuer_user_account_id { get; set; }
 
         [Required]
-        [StringLength(48)]
+        [StringLength(50)]
         public string barcode_number { get; set; }
 
         public DateTime create_date { get; set; }

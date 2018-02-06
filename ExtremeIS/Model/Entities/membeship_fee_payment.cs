@@ -29,8 +29,6 @@ namespace ExtremeIS.Model.Entities
 
         public DateTime payment_date { get; set; }
 
-        public DateTime? last_updated { get; set; }
-
         public virtual member member { get; set; }
 
         public virtual user_account user_account { get; set; }

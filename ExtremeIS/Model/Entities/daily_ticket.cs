@@ -12,6 +12,9 @@ namespace ExtremeIS.Model.Entities
         [Key]
         public int daily_ticket_id { get; set; }
 
+        [StringLength(80)]
+        public string person_name { get; set; }
+
         public int issuer_user_account_id { get; set; }
 
         public int daily_ticket_type_id { get; set; }

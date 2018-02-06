@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExtremeIS
+namespace ExtremeIS.Forms
 {
     public partial class DailyTicketForm : Form
     {

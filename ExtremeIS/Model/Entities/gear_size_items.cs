@@ -13,7 +13,6 @@ namespace ExtremeIS.Model.Entities
         public gear_size_items()
         {
             gear_borrowing_items = new HashSet<gear_borrowing_items>();
-            gear_rental_items = new HashSet<gear_rental_items>();
             gear_write_off = new HashSet<gear_write_off>();
         }
 
@@ -35,9 +34,6 @@ namespace ExtremeIS.Model.Entities
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gear_borrowing_items> gear_borrowing_items { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<gear_rental_items> gear_rental_items { get; set; }
 
         public virtual gear_size gear_size { get; set; }
 

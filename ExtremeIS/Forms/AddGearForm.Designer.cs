@@ -28,400 +28,573 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblGearName = new System.Windows.Forms.Label();
-            this.lblManufacturer = new System.Windows.Forms.Label();
-            this.lblRemark = new System.Windows.Forms.Label();
-            this.lblGearCategory = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cBoxGearManufacturer = new System.Windows.Forms.ComboBox();
-            this.cBoxGearCategory = new System.Windows.Forms.ComboBox();
-            this.rTextBoxGearRemark = new System.Windows.Forms.RichTextBox();
-            this.lblGearId = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.checkBoxMultipleSizes = new System.Windows.Forms.CheckBox();
             this.cBoxGearSize = new System.Windows.Forms.ComboBox();
             this.lblGearSize = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.nUpDownGearQuantity = new System.Windows.Forms.NumericUpDown();
             this.btnAddGearConfirm = new System.Windows.Forms.Button();
             this.btnAddGearCancle = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.groupBoxSizes = new System.Windows.Forms.GroupBox();
+            this.checkBoxXS = new System.Windows.Forms.CheckBox();
+            this.checkBoxS = new System.Windows.Forms.CheckBox();
+            this.checkBoxM = new System.Windows.Forms.CheckBox();
+            this.checkBoxL = new System.Windows.Forms.CheckBox();
+            this.nUpDownXXL = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxXL = new System.Windows.Forms.CheckBox();
+            this.nUpDownXL = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxXXL = new System.Windows.Forms.CheckBox();
+            this.nUpDownL = new System.Windows.Forms.NumericUpDown();
+            this.nUpDownXS = new System.Windows.Forms.NumericUpDown();
+            this.nUpDownM = new System.Windows.Forms.NumericUpDown();
+            this.nUpDownS = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxBasicInfo = new System.Windows.Forms.GroupBox();
+            this.cBoxGearName = new System.Windows.Forms.ComboBox();
+            this.rTextBoxGearDescription = new System.Windows.Forms.RichTextBox();
+            this.cBoxGearCategory = new System.Windows.Forms.ComboBox();
+            this.cBoxGearManufacturer = new System.Windows.Forms.ComboBox();
+            this.lblRemark = new System.Windows.Forms.Label();
+            this.lblGearCategory = new System.Windows.Forms.Label();
+            this.lblManufacturer = new System.Windows.Forms.Label();
+            this.lblGearName = new System.Windows.Forms.Label();
+            this.lblGearNameError = new System.Windows.Forms.Label();
+            this.lblGearCategoryError = new System.Windows.Forms.Label();
+            this.lblGearManufacturerError = new System.Windows.Forms.Label();
+            this.lblGearSizeError = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownGearQuantity)).BeginInit();
+            this.groupBoxSizes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXXL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownS)).BeginInit();
+            this.groupBoxBasicInfo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblGearName
-            // 
-            this.lblGearName.AutoSize = true;
-            this.lblGearName.Location = new System.Drawing.Point(40, 64);
-            this.lblGearName.Name = "lblGearName";
-            this.lblGearName.Size = new System.Drawing.Size(153, 17);
-            this.lblGearName.TabIndex = 0;
-            this.lblGearName.Text = "Detaljan naziv opreme:";
-            this.lblGearName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblManufacturer
-            // 
-            this.lblManufacturer.AutoSize = true;
-            this.lblManufacturer.Location = new System.Drawing.Point(40, 119);
-            this.lblManufacturer.Name = "lblManufacturer";
-            this.lblManufacturer.Size = new System.Drawing.Size(85, 17);
-            this.lblManufacturer.TabIndex = 1;
-            this.lblManufacturer.Text = "Proizvodjač:";
-            // 
-            // lblRemark
-            // 
-            this.lblRemark.AutoSize = true;
-            this.lblRemark.Location = new System.Drawing.Point(40, 296);
-            this.lblRemark.Name = "lblRemark";
-            this.lblRemark.Size = new System.Drawing.Size(81, 17);
-            this.lblRemark.TabIndex = 3;
-            this.lblRemark.Text = "Napomena:";
-            // 
-            // lblGearCategory
-            // 
-            this.lblGearCategory.AutoSize = true;
-            this.lblGearCategory.Location = new System.Drawing.Point(40, 173);
-            this.lblGearCategory.Name = "lblGearCategory";
-            this.lblGearCategory.Size = new System.Drawing.Size(76, 17);
-            this.lblGearCategory.TabIndex = 2;
-            this.lblGearCategory.Text = "Kategorija:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(199, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 22);
-            this.textBox1.TabIndex = 4;
-            // 
-            // cBoxGearManufacturer
-            // 
-            this.cBoxGearManufacturer.FormattingEnabled = true;
-            this.cBoxGearManufacturer.Location = new System.Drawing.Point(199, 116);
-            this.cBoxGearManufacturer.Name = "cBoxGearManufacturer";
-            this.cBoxGearManufacturer.Size = new System.Drawing.Size(239, 24);
-            this.cBoxGearManufacturer.TabIndex = 8;
-            // 
-            // cBoxGearCategory
-            // 
-            this.cBoxGearCategory.FormattingEnabled = true;
-            this.cBoxGearCategory.Location = new System.Drawing.Point(199, 170);
-            this.cBoxGearCategory.Name = "cBoxGearCategory";
-            this.cBoxGearCategory.Size = new System.Drawing.Size(239, 24);
-            this.cBoxGearCategory.TabIndex = 9;
-            // 
-            // rTextBoxGearRemark
-            // 
-            this.rTextBoxGearRemark.Location = new System.Drawing.Point(199, 274);
-            this.rTextBoxGearRemark.Name = "rTextBoxGearRemark";
-            this.rTextBoxGearRemark.Size = new System.Drawing.Size(250, 96);
-            this.rTextBoxGearRemark.TabIndex = 10;
-            this.rTextBoxGearRemark.Text = "";
-            // 
-            // lblGearId
-            // 
-            this.lblGearId.AutoSize = true;
-            this.lblGearId.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblGearId.Location = new System.Drawing.Point(42, 29);
-            this.lblGearId.Name = "lblGearId";
-            this.lblGearId.Size = new System.Drawing.Size(97, 17);
-            this.lblGearId.TabIndex = 30;
-            this.lblGearId.Text = "ID opreme: 79";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 224);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 17);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Preporučeni rok uoptrebe?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBoxMultipleSizes
             // 
             this.checkBoxMultipleSizes.AutoSize = true;
-            this.checkBoxMultipleSizes.Location = new System.Drawing.Point(199, 472);
+            this.checkBoxMultipleSizes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxMultipleSizes.Location = new System.Drawing.Point(610, 152);
             this.checkBoxMultipleSizes.Name = "checkBoxMultipleSizes";
-            this.checkBoxMultipleSizes.Size = new System.Drawing.Size(205, 21);
+            this.checkBoxMultipleSizes.Size = new System.Drawing.Size(241, 21);
             this.checkBoxMultipleSizes.TabIndex = 34;
-            this.checkBoxMultipleSizes.Text = "Omogući unos više veličina ";
+            this.checkBoxMultipleSizes.Text = "Omogući unos više veličina          ";
             this.checkBoxMultipleSizes.UseVisualStyleBackColor = true;
+            this.checkBoxMultipleSizes.CheckedChanged += new System.EventHandler(this.checkBoxMultipleSizes_CheckedChanged);
             // 
             // cBoxGearSize
             // 
+            this.cBoxGearSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxGearSize.FormattingEnabled = true;
-            this.cBoxGearSize.Location = new System.Drawing.Point(199, 404);
+            this.cBoxGearSize.Location = new System.Drawing.Point(739, 110);
             this.cBoxGearSize.Name = "cBoxGearSize";
-            this.cBoxGearSize.Size = new System.Drawing.Size(56, 24);
+            this.cBoxGearSize.Size = new System.Drawing.Size(110, 24);
             this.cBoxGearSize.TabIndex = 36;
             // 
             // lblGearSize
             // 
             this.lblGearSize.AutoSize = true;
-            this.lblGearSize.Location = new System.Drawing.Point(42, 411);
+            this.lblGearSize.Location = new System.Drawing.Point(609, 113);
             this.lblGearSize.Name = "lblGearSize";
             this.lblGearSize.Size = new System.Drawing.Size(61, 17);
             this.lblGearSize.TabIndex = 35;
             this.lblGearSize.Text = "Veličina:";
             // 
-            // label3
+            // lblQuantity
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 441);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Količina:";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(609, 74);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(70, 17);
+            this.lblQuantity.TabIndex = 51;
+            this.lblQuantity.Text = "Količina:";
             // 
-            // numericUpDown7
+            // nUpDownGearQuantity
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(199, 436);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(56, 22);
-            this.numericUpDown7.TabIndex = 52;
+            this.nUpDownGearQuantity.Location = new System.Drawing.Point(739, 73);
+            this.nUpDownGearQuantity.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownGearQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownGearQuantity.Name = "nUpDownGearQuantity";
+            this.nUpDownGearQuantity.Size = new System.Drawing.Size(110, 22);
+            this.nUpDownGearQuantity.TabIndex = 52;
+            this.nUpDownGearQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nUpDownGearQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnAddGearConfirm
             // 
-            this.btnAddGearConfirm.Location = new System.Drawing.Point(92, 657);
+            this.btnAddGearConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGearConfirm.Location = new System.Drawing.Point(355, 369);
             this.btnAddGearConfirm.Name = "btnAddGearConfirm";
             this.btnAddGearConfirm.Size = new System.Drawing.Size(127, 32);
             this.btnAddGearConfirm.TabIndex = 53;
             this.btnAddGearConfirm.Text = "Potvrdi";
             this.btnAddGearConfirm.UseVisualStyleBackColor = true;
+            this.btnAddGearConfirm.Click += new System.EventHandler(this.btnAddGearConfirm_Click);
             // 
             // btnAddGearCancle
             // 
-            this.btnAddGearCancle.Location = new System.Drawing.Point(265, 657);
+            this.btnAddGearCancle.Location = new System.Drawing.Point(507, 369);
             this.btnAddGearCancle.Name = "btnAddGearCancle";
             this.btnAddGearCancle.Size = new System.Drawing.Size(127, 32);
             this.btnAddGearCancle.TabIndex = 54;
             this.btnAddGearCancle.Text = "Odustani";
             this.btnAddGearCancle.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupBoxSizes
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.numericUpDown6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.numericUpDown5);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.numericUpDown4);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.numericUpDown3);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Location = new System.Drawing.Point(36, 518);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 115);
-            this.groupBox1.TabIndex = 55;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Izbor veličina i broja stavki:";
+            this.groupBoxSizes.Controls.Add(this.checkBoxXS);
+            this.groupBoxSizes.Controls.Add(this.checkBoxS);
+            this.groupBoxSizes.Controls.Add(this.checkBoxM);
+            this.groupBoxSizes.Controls.Add(this.checkBoxL);
+            this.groupBoxSizes.Controls.Add(this.nUpDownXXL);
+            this.groupBoxSizes.Controls.Add(this.checkBoxXL);
+            this.groupBoxSizes.Controls.Add(this.nUpDownXL);
+            this.groupBoxSizes.Controls.Add(this.checkBoxXXL);
+            this.groupBoxSizes.Controls.Add(this.nUpDownL);
+            this.groupBoxSizes.Controls.Add(this.nUpDownXS);
+            this.groupBoxSizes.Controls.Add(this.nUpDownM);
+            this.groupBoxSizes.Controls.Add(this.nUpDownS);
+            this.groupBoxSizes.Enabled = false;
+            this.groupBoxSizes.Location = new System.Drawing.Point(507, 217);
+            this.groupBoxSizes.Name = "groupBoxSizes";
+            this.groupBoxSizes.Size = new System.Drawing.Size(450, 125);
+            this.groupBoxSizes.TabIndex = 55;
+            this.groupBoxSizes.TabStop = false;
+            this.groupBoxSizes.Text = "Izbor veličina i broja stavki:";
             // 
-            // checkBox1
+            // checkBoxXS
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox1.Location = new System.Drawing.Point(28, 36);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 21);
-            this.checkBox1.TabIndex = 52;
-            this.checkBox1.Text = "XS";
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxXS.AutoSize = true;
+            this.checkBoxXS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxXS.Location = new System.Drawing.Point(28, 39);
+            this.checkBoxXS.Name = "checkBoxXS";
+            this.checkBoxXS.Size = new System.Drawing.Size(48, 21);
+            this.checkBoxXS.TabIndex = 52;
+            this.checkBoxXS.Text = "XS";
+            this.checkBoxXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxXS.UseVisualStyleBackColor = true;
+            this.checkBoxXS.CheckedChanged += new System.EventHandler(this.checkBoxXS_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxS
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox2.Location = new System.Drawing.Point(97, 36);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(39, 21);
-            this.checkBox2.TabIndex = 53;
-            this.checkBox2.Text = "S";
-            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxS.AutoSize = true;
+            this.checkBoxS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxS.Location = new System.Drawing.Point(97, 39);
+            this.checkBoxS.Name = "checkBoxS";
+            this.checkBoxS.Size = new System.Drawing.Size(39, 21);
+            this.checkBoxS.TabIndex = 53;
+            this.checkBoxS.Text = "S";
+            this.checkBoxS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxS.UseVisualStyleBackColor = true;
+            this.checkBoxS.CheckedChanged += new System.EventHandler(this.checkBoxS_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxM
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox3.Location = new System.Drawing.Point(165, 36);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(41, 21);
-            this.checkBox3.TabIndex = 54;
-            this.checkBox3.Text = "M";
-            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxM.AutoSize = true;
+            this.checkBoxM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxM.Location = new System.Drawing.Point(165, 39);
+            this.checkBoxM.Name = "checkBoxM";
+            this.checkBoxM.Size = new System.Drawing.Size(41, 21);
+            this.checkBoxM.TabIndex = 54;
+            this.checkBoxM.Text = "M";
+            this.checkBoxM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxM.UseVisualStyleBackColor = true;
+            this.checkBoxM.CheckedChanged += new System.EventHandler(this.checkBoxM_CheckedChanged);
             // 
-            // checkBox4
+            // checkBoxL
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox4.Location = new System.Drawing.Point(234, 36);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(38, 21);
-            this.checkBox4.TabIndex = 55;
-            this.checkBox4.Text = "L";
-            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxL.AutoSize = true;
+            this.checkBoxL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxL.Location = new System.Drawing.Point(234, 39);
+            this.checkBoxL.Name = "checkBoxL";
+            this.checkBoxL.Size = new System.Drawing.Size(38, 21);
+            this.checkBoxL.TabIndex = 55;
+            this.checkBoxL.Text = "L";
+            this.checkBoxL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxL.UseVisualStyleBackColor = true;
+            this.checkBoxL.CheckedChanged += new System.EventHandler(this.checkBoxL_CheckedChanged);
             // 
-            // numericUpDown6
+            // nUpDownXXL
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(374, 72);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown6.TabIndex = 63;
+            this.nUpDownXXL.Enabled = false;
+            this.nUpDownXXL.Location = new System.Drawing.Point(374, 75);
+            this.nUpDownXXL.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownXXL.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownXXL.Name = "nUpDownXXL";
+            this.nUpDownXXL.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownXXL.TabIndex = 63;
+            this.nUpDownXXL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // checkBox5
+            // checkBoxXL
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox5.Location = new System.Drawing.Point(303, 36);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(47, 21);
-            this.checkBox5.TabIndex = 56;
-            this.checkBox5.Text = "XL";
-            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBoxXL.AutoSize = true;
+            this.checkBoxXL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxXL.Location = new System.Drawing.Point(303, 39);
+            this.checkBoxXL.Name = "checkBoxXL";
+            this.checkBoxXL.Size = new System.Drawing.Size(47, 21);
+            this.checkBoxXL.TabIndex = 56;
+            this.checkBoxXL.Text = "XL";
+            this.checkBoxXL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxXL.UseVisualStyleBackColor = true;
+            this.checkBoxXL.CheckedChanged += new System.EventHandler(this.checkBoxXL_CheckedChanged);
             // 
-            // numericUpDown5
+            // nUpDownXL
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(303, 72);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown5.TabIndex = 62;
+            this.nUpDownXL.Enabled = false;
+            this.nUpDownXL.Location = new System.Drawing.Point(303, 75);
+            this.nUpDownXL.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownXL.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownXL.Name = "nUpDownXL";
+            this.nUpDownXL.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownXL.TabIndex = 62;
+            this.nUpDownXL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // checkBox6
+            // checkBoxXXL
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox6.Location = new System.Drawing.Point(374, 36);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(56, 21);
-            this.checkBox6.TabIndex = 57;
-            this.checkBox6.Text = "XXL";
-            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBoxXXL.AutoSize = true;
+            this.checkBoxXXL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBoxXXL.Location = new System.Drawing.Point(374, 39);
+            this.checkBoxXXL.Name = "checkBoxXXL";
+            this.checkBoxXXL.Size = new System.Drawing.Size(56, 21);
+            this.checkBoxXXL.TabIndex = 57;
+            this.checkBoxXXL.Text = "XXL";
+            this.checkBoxXXL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxXXL.UseVisualStyleBackColor = true;
+            this.checkBoxXXL.CheckedChanged += new System.EventHandler(this.checkBoxXXL_CheckedChanged);
             // 
-            // numericUpDown4
+            // nUpDownL
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(234, 72);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown4.TabIndex = 61;
+            this.nUpDownL.Enabled = false;
+            this.nUpDownL.Location = new System.Drawing.Point(234, 75);
+            this.nUpDownL.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownL.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownL.Name = "nUpDownL";
+            this.nUpDownL.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownL.TabIndex = 61;
+            this.nUpDownL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown1
+            // nUpDownXS
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(28, 72);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown1.TabIndex = 58;
+            this.nUpDownXS.Enabled = false;
+            this.nUpDownXS.Location = new System.Drawing.Point(28, 75);
+            this.nUpDownXS.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownXS.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownXS.Name = "nUpDownXS";
+            this.nUpDownXS.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownXS.TabIndex = 58;
+            this.nUpDownXS.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown3
+            // nUpDownM
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(165, 72);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown3.TabIndex = 60;
+            this.nUpDownM.Enabled = false;
+            this.nUpDownM.Location = new System.Drawing.Point(165, 75);
+            this.nUpDownM.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nUpDownM.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownM.Name = "nUpDownM";
+            this.nUpDownM.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownM.TabIndex = 60;
+            this.nUpDownM.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown2
+            // nUpDownS
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(97, 72);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown2.TabIndex = 59;
+            this.nUpDownS.Enabled = false;
+            this.nUpDownS.Location = new System.Drawing.Point(97, 75);
+            this.nUpDownS.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUpDownS.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUpDownS.Name = "nUpDownS";
+            this.nUpDownS.Size = new System.Drawing.Size(47, 22);
+            this.nUpDownS.TabIndex = 59;
+            this.nUpDownS.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBoxBasicInfo
+            // 
+            this.groupBoxBasicInfo.Controls.Add(this.lblGearManufacturerError);
+            this.groupBoxBasicInfo.Controls.Add(this.lblGearCategoryError);
+            this.groupBoxBasicInfo.Controls.Add(this.lblGearNameError);
+            this.groupBoxBasicInfo.Controls.Add(this.cBoxGearName);
+            this.groupBoxBasicInfo.Controls.Add(this.rTextBoxGearDescription);
+            this.groupBoxBasicInfo.Controls.Add(this.cBoxGearCategory);
+            this.groupBoxBasicInfo.Controls.Add(this.cBoxGearManufacturer);
+            this.groupBoxBasicInfo.Controls.Add(this.lblRemark);
+            this.groupBoxBasicInfo.Controls.Add(this.lblGearCategory);
+            this.groupBoxBasicInfo.Controls.Add(this.lblManufacturer);
+            this.groupBoxBasicInfo.Controls.Add(this.lblGearName);
+            this.groupBoxBasicInfo.Location = new System.Drawing.Point(32, 24);
+            this.groupBoxBasicInfo.Name = "groupBoxBasicInfo";
+            this.groupBoxBasicInfo.Size = new System.Drawing.Size(450, 318);
+            this.groupBoxBasicInfo.TabIndex = 56;
+            this.groupBoxBasicInfo.TabStop = false;
+            this.groupBoxBasicInfo.Text = "Osnovni podaci";
+            // 
+            // cBoxGearName
+            // 
+            this.cBoxGearName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxGearName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxGearName.FormattingEnabled = true;
+            this.cBoxGearName.Location = new System.Drawing.Point(153, 41);
+            this.cBoxGearName.Name = "cBoxGearName";
+            this.cBoxGearName.Size = new System.Drawing.Size(265, 24);
+            this.cBoxGearName.TabIndex = 19;
+            this.cBoxGearName.SelectedIndexChanged += new System.EventHandler(this.cBoxGearName_SelectedIndexChanged);
+            // 
+            // rTextBoxGearDescription
+            // 
+            this.rTextBoxGearDescription.Location = new System.Drawing.Point(153, 198);
+            this.rTextBoxGearDescription.Name = "rTextBoxGearDescription";
+            this.rTextBoxGearDescription.Size = new System.Drawing.Size(265, 92);
+            this.rTextBoxGearDescription.TabIndex = 18;
+            this.rTextBoxGearDescription.Text = "";
+            // 
+            // cBoxGearCategory
+            // 
+            this.cBoxGearCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBoxGearCategory.FormattingEnabled = true;
+            this.cBoxGearCategory.Location = new System.Drawing.Point(153, 145);
+            this.cBoxGearCategory.Name = "cBoxGearCategory";
+            this.cBoxGearCategory.Size = new System.Drawing.Size(265, 24);
+            this.cBoxGearCategory.TabIndex = 17;
+            // 
+            // cBoxGearManufacturer
+            // 
+            this.cBoxGearManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cBoxGearManufacturer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cBoxGearManufacturer.FormattingEnabled = true;
+            this.cBoxGearManufacturer.Location = new System.Drawing.Point(153, 93);
+            this.cBoxGearManufacturer.Name = "cBoxGearManufacturer";
+            this.cBoxGearManufacturer.Size = new System.Drawing.Size(265, 24);
+            this.cBoxGearManufacturer.TabIndex = 16;
+            // 
+            // lblRemark
+            // 
+            this.lblRemark.AutoSize = true;
+            this.lblRemark.Location = new System.Drawing.Point(20, 198);
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.Size = new System.Drawing.Size(81, 17);
+            this.lblRemark.TabIndex = 14;
+            this.lblRemark.Text = "Napomena:";
+            // 
+            // lblGearCategory
+            // 
+            this.lblGearCategory.AutoSize = true;
+            this.lblGearCategory.Location = new System.Drawing.Point(20, 148);
+            this.lblGearCategory.Name = "lblGearCategory";
+            this.lblGearCategory.Size = new System.Drawing.Size(76, 17);
+            this.lblGearCategory.TabIndex = 13;
+            this.lblGearCategory.Text = "Kategorija:";
+            // 
+            // lblManufacturer
+            // 
+            this.lblManufacturer.AutoSize = true;
+            this.lblManufacturer.Location = new System.Drawing.Point(20, 96);
+            this.lblManufacturer.Name = "lblManufacturer";
+            this.lblManufacturer.Size = new System.Drawing.Size(85, 17);
+            this.lblManufacturer.TabIndex = 12;
+            this.lblManufacturer.Text = "Proizvodjač:";
+            // 
+            // lblGearName
+            // 
+            this.lblGearName.AutoSize = true;
+            this.lblGearName.Location = new System.Drawing.Point(20, 44);
+            this.lblGearName.Name = "lblGearName";
+            this.lblGearName.Size = new System.Drawing.Size(101, 17);
+            this.lblGearName.TabIndex = 11;
+            this.lblGearName.Text = "Detaljan naziv:";
+            this.lblGearName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblGearNameError
+            // 
+            this.lblGearNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGearNameError.ForeColor = System.Drawing.Color.Red;
+            this.lblGearNameError.Location = new System.Drawing.Point(153, 68);
+            this.lblGearNameError.Name = "lblGearNameError";
+            this.lblGearNameError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGearNameError.Size = new System.Drawing.Size(265, 23);
+            this.lblGearNameError.TabIndex = 57;
+            // 
+            // lblGearCategoryError
+            // 
+            this.lblGearCategoryError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGearCategoryError.ForeColor = System.Drawing.Color.Red;
+            this.lblGearCategoryError.Location = new System.Drawing.Point(153, 119);
+            this.lblGearCategoryError.Name = "lblGearCategoryError";
+            this.lblGearCategoryError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGearCategoryError.Size = new System.Drawing.Size(265, 23);
+            this.lblGearCategoryError.TabIndex = 58;
+            // 
+            // lblGearManufacturerError
+            // 
+            this.lblGearManufacturerError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGearManufacturerError.ForeColor = System.Drawing.Color.Red;
+            this.lblGearManufacturerError.Location = new System.Drawing.Point(153, 172);
+            this.lblGearManufacturerError.Name = "lblGearManufacturerError";
+            this.lblGearManufacturerError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGearManufacturerError.Size = new System.Drawing.Size(265, 23);
+            this.lblGearManufacturerError.TabIndex = 59;
+            // 
+            // lblGearSizeError
+            // 
+            this.lblGearSizeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGearSizeError.ForeColor = System.Drawing.Color.Red;
+            this.lblGearSizeError.Location = new System.Drawing.Point(753, 185);
+            this.lblGearSizeError.Name = "lblGearSizeError";
+            this.lblGearSizeError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGearSizeError.Size = new System.Drawing.Size(100, 23);
+            this.lblGearSizeError.TabIndex = 60;
             // 
             // AddGearForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 712);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(981, 424);
+            this.Controls.Add(this.lblGearSizeError);
+            this.Controls.Add(this.groupBoxBasicInfo);
+            this.Controls.Add(this.groupBoxSizes);
             this.Controls.Add(this.btnAddGearCancle);
             this.Controls.Add(this.btnAddGearConfirm);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.nUpDownGearQuantity);
+            this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.cBoxGearSize);
             this.Controls.Add(this.lblGearSize);
             this.Controls.Add(this.checkBoxMultipleSizes);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblGearId);
-            this.Controls.Add(this.rTextBoxGearRemark);
-            this.Controls.Add(this.cBoxGearCategory);
-            this.Controls.Add(this.cBoxGearManufacturer);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblRemark);
-            this.Controls.Add(this.lblGearCategory);
-            this.Controls.Add(this.lblManufacturer);
-            this.Controls.Add(this.lblGearName);
             this.Name = "AddGearForm";
             this.Text = "Dodavanje opreme";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.AddGearForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownGearQuantity)).EndInit();
+            this.groupBoxSizes.ResumeLayout(false);
+            this.groupBoxSizes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXXL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownXS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUpDownS)).EndInit();
+            this.groupBoxBasicInfo.ResumeLayout(false);
+            this.groupBoxBasicInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblGearName;
-        private System.Windows.Forms.Label lblManufacturer;
-        private System.Windows.Forms.Label lblRemark;
-        private System.Windows.Forms.Label lblGearCategory;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cBoxGearManufacturer;
-        private System.Windows.Forms.ComboBox cBoxGearCategory;
-        private System.Windows.Forms.RichTextBox rTextBoxGearRemark;
-        private System.Windows.Forms.Label lblGearId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxMultipleSizes;
         private System.Windows.Forms.ComboBox cBoxGearSize;
         private System.Windows.Forms.Label lblGearSize;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.NumericUpDown nUpDownGearQuantity;
         private System.Windows.Forms.Button btnAddGearConfirm;
         private System.Windows.Forms.Button btnAddGearCancle;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.GroupBox groupBoxSizes;
+        private System.Windows.Forms.CheckBox checkBoxXS;
+        private System.Windows.Forms.CheckBox checkBoxS;
+        private System.Windows.Forms.CheckBox checkBoxM;
+        private System.Windows.Forms.CheckBox checkBoxL;
+        private System.Windows.Forms.NumericUpDown nUpDownXXL;
+        private System.Windows.Forms.CheckBox checkBoxXL;
+        private System.Windows.Forms.NumericUpDown nUpDownXL;
+        private System.Windows.Forms.CheckBox checkBoxXXL;
+        private System.Windows.Forms.NumericUpDown nUpDownL;
+        private System.Windows.Forms.NumericUpDown nUpDownXS;
+        private System.Windows.Forms.NumericUpDown nUpDownM;
+        private System.Windows.Forms.NumericUpDown nUpDownS;
+        private System.Windows.Forms.GroupBox groupBoxBasicInfo;
+        private System.Windows.Forms.RichTextBox rTextBoxGearDescription;
+        private System.Windows.Forms.ComboBox cBoxGearCategory;
+        private System.Windows.Forms.ComboBox cBoxGearManufacturer;
+        private System.Windows.Forms.Label lblRemark;
+        private System.Windows.Forms.Label lblGearCategory;
+        private System.Windows.Forms.Label lblManufacturer;
+        private System.Windows.Forms.Label lblGearName;
+        private System.Windows.Forms.ComboBox cBoxGearName;
+        private System.Windows.Forms.Label lblGearNameError;
+        private System.Windows.Forms.Label lblGearManufacturerError;
+        private System.Windows.Forms.Label lblGearCategoryError;
+        private System.Windows.Forms.Label lblGearSizeError;
     }
 }

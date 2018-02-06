@@ -14,6 +14,7 @@ namespace ExtremeIS.Model.Entities
         {
             attendances = new HashSet<attendance>();
             gear_borrowing = new HashSet<gear_borrowing>();
+            member_education = new HashSet<member_education>();
             membership_card = new HashSet<membership_card>();
             membeship_fee_payment = new HashSet<membeship_fee_payment>();
             user_account = new HashSet<user_account>();
@@ -52,17 +53,19 @@ namespace ExtremeIS.Model.Entities
 
         public bool active { get; set; }
 
-        public int education_level_id { get; set; }
+        [StringLength(200)]
+        public string profile_picture { get; set; }
 
         public int membership_type_id { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<attendance> attendances { get; set; }
 
-        public virtual education_level education_level { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gear_borrowing> gear_borrowing { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<member_education> member_education { get; set; }
 
         public virtual membership_type membership_type { get; set; }
 

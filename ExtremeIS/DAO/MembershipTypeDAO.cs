@@ -23,15 +23,15 @@ namespace ExtremeIS.DAO
             }
         }
 
-        public static String getById(int id)
+        public static membership_type getById(int id)
         {
             using (var db = new ExtremeAppContext())
             {
-                var name =
+                var membershipType =
                     (from e in db.membership_type where e.membership_type_id==id
-                     select e.name).First();
+                     select e).First();
 
-                return name;
+                return membershipType;
 
             }
         }

@@ -13,38 +13,39 @@ namespace ExtremeIS.Forms
 {
     public partial class MainForm : Form
     {
-
-        private int selectedMemberRowIndex;
-        private List<member> members;
+        DateTime lastKeystroke = new DateTime(0);
+        List<char> barcode = new List<char>(12);
 
         public MainForm()
         {
-
             InitializeComponent();
-            populateTable();
+            populateTable(false);
+            this.ActiveControl = textBoxMemberLogin;
+            
         }
-
-        private void populateTable()
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            DataTable table = new DataTable();
-            table.Columns.Add("ID", typeof(int));
-            table.Columns.Add("Ime", typeof(string));
-            table.Columns.Add("Prezime", typeof(string));
+            AutoCompleteStringCollection MyCollection = new AutoCompleteStringCollection();
+            MyCollection.AddRange(MemberDAO.getAllBasicInfo().ToArray());
+            textBoxMemberLogin.AutoCompleteCustomSource = MyCollection;
+            calendarAttendance.MaxDate = DateTime.Now;
+            dateTimePickerReportDateFrom.MaxDate = DateTime.Now;
+            dateTimePickerReportDateTo.MaxDate = DateTime.Now;
+            dateTimePickerEducationLevelExamDate.MaxDate = DateTime.Now;
+            //You can pay for the month three days before
+            var payingMonth = DateTime.Now.AddDays(3).Month;
+            var payingYear = DateTime.Now.AddDays(3).Year;
+            comboBoxMonthMembershipFee.Items.Add(((months)payingMonth).ToString());
+            comboBoxMonthMembershipFee.SelectedIndex = 0;
+            comboBoxYearMembershipFee.Items.Add(payingYear);
+            comboBoxYearMembershipFee.SelectedIndex = 0;
 
-            members = MemberDAO.getAll();
-
-            foreach (var member in members)
-            {
-                table.Rows.Add(member.member_id, member.first_name, member.last_name);
-            }
-
-            dataGridViewMembers.DataSource = table;
-
-
+            comboBoxReportCategory.Items.Add("Članovi");
+            comboBoxReportCategory.Items.Add("Oprema");
+            comboBoxReportCategory.Items.Add("Finansije");
+            comboBoxReportCategory.SelectedIndex = 0;
+            
         }
-
-
-
         private void btnDailyTicket_Click(object sender, EventArgs e)
         {
             var dailyTicket = new DailyTicketForm();
@@ -54,32 +55,42 @@ namespace ExtremeIS.Forms
 
         private void btnMemberLogin_Click(object sender, EventArgs e)
         {
-            var memberCheckIn = new MemberCheckIn();
+            var memberCheckIn = new MemberCheckIn(this,tabControl1);
             memberCheckIn.ShowDialog();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
 
         }
 
-        private void dataGridViewMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            selectedMemberRowIndex = dataGridViewMembers.CurrentCell.RowIndex;
-            if (selectedMemberRowIndex < members.Count)
+            // check timing (keystrokes within 100 ms)
+            TimeSpan elapsed = (DateTime.Now - lastKeystroke);
+            if (elapsed.TotalMilliseconds > 100)
+                barcode.Clear();
+
+            // record keystroke & timestamp
+            barcode.Add(e.KeyChar);
+            lastKeystroke = DateTime.Now;
+
+            // process barcode
+            if (e.KeyChar == 13 && barcode.Count > 0)
             {
-                var member = members[selectedMemberRowIndex];
-                lblFirstNameProfileView.Text = member.first_name;
-                lblLastNameProfileView.Text = member.last_name;
-                lblBirthDateProfileView.Text = String.Format("{0:MM.dd.yyyy}", member.birth_date);
-                lblAddressProfileView.Text = member.address;
-                lblSexProfileView.Text = member.sex;
-                lblPhoneNumberProfileView.Text = member.phone_number;
-                lblEmailProfileView.Text = member.email;
-                lblRegistrationDateProfileView.Text = String.Format("{0:MM.dd.yyyy}", member.registration_date);
-                lblMembershipTypeProfileView.Text = MembershipTypeDAO.getById(member.membership_type_id);
-                lblEducationLevelProfileView.Text = EducationLevelDAO.getById(member.education_level_id);
+                string msg = new String(barcode.ToArray());
+                //tabControl1.SelectTab(0);
+                textBoxMemberLogin.Text = msg;
+
+                barcode.Clear();
             }
         }
+
+       
     }
 }

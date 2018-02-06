@@ -22,6 +22,8 @@ namespace ExtremeIS.Model.Entities
         [StringLength(45)]
         public string name { get; set; }
 
+        public bool? has_size { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<gear> gears { get; set; }
     }

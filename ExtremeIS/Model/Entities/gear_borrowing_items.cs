@@ -12,17 +12,17 @@ namespace ExtremeIS.Model.Entities
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int gear_id { get; set; }
+        public int gear_borrowing_id { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int gear_size_id { get; set; }
+        public int gear_id { get; set; }
 
         [Key]
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int gear_borrowing_id { get; set; }
+        public int gear_size_id { get; set; }
 
         [Required]
         [StringLength(45)]
