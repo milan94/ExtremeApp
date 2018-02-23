@@ -23,8 +23,6 @@ namespace ExtremeIS.Forms
 
         public AddMemberForm(MainForm form)
         {
-            Console.WriteLine(path);
-
             InitializeComponent();
             mainForm = form;
             comboBoxMembershipType.DataSource = MembershipTypeDAO.getAll();
@@ -49,7 +47,7 @@ namespace ExtremeIS.Forms
         }
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
-            lblMemberID.Text =(MemberDAO.getLast() + 1).ToString();
+            lblMemberID.Text = (MemberDAO.getLast() + 1).ToString();
             dateTimePickerBirthDate.MaxDate = DateTime.Now;
             dateTimePickerRegistrationDate.MaxDate = DateTime.Now;
         }
@@ -67,7 +65,7 @@ namespace ExtremeIS.Forms
             {
                 radioButtonSexFemale.Checked = true;
             }
-            if ("".Equals(member.profile_picture) || member.profile_picture == null)
+            if (String.IsNullOrEmpty(member.profile_picture))
             {
                 pictureBoxProfilePicture.Image = Properties.Resources.user;
             }
@@ -114,23 +112,31 @@ namespace ExtremeIS.Forms
                     active = checkBoxActiveMember.Checked,
                     membership_type_id = comboBoxMembershipType.SelectedIndex + 1
                 };
-                if (memberId == 0)
-                {
-                    int result = MemberDAO.insert(member);
-                    if (result == 1)
-                    {
-                        DialogResult dialogResult
-                        = MessageBox.Show("Korisnik je uspješno dodan! Da li želite da ištampate člansku kartu ?",
-                         "Štampanje članske karte", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            Bitmap barcodeImage = (Bitmap)generateBarcodeImage(generateBarcodeNumber());
-                            barcodeImage.Save(path);
-                            new ReportForm(member.first_name, member.last_name, member.member_id.ToString()
-                                , path).Show();
 
-                        }
+
+                int result = MemberDAO.insert(member);
+                var membership_card = new membership_card()
+                {
+                    active = true,
+                    barcode_number = generateBarcodeNumber(),
+                    issuer_user_account_id = mainForm.loggedInUser.user_account_id,
+                    member_id = MemberDAO.getLast(),
+                    create_date = DateTime.Now
+                };
+                if (result == 1)
+                {
+                    DialogResult dialogResult
+                    = MessageBox.Show("Korisnik je uspješno dodan! Da li želite da ištampate člansku kartu ?",
+                     "Štampanje članske karte", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Bitmap barcodeImage = (Bitmap)generateBarcodeImage(generateBarcodeNumber());
+                        barcodeImage.Save(path);
+                        new ReportForm(member.first_name, member.last_name, member.member_id.ToString()
+                            , path).Show();
+
                     }
+
                     else
                     {
                         MessageBox.Show("Došlo je do greške prilikom dodavanja!");
@@ -140,7 +146,7 @@ namespace ExtremeIS.Forms
                 else
                 {
                     member.member_id = memberId;
-                    int result = MemberDAO.update(member);
+                     result = MemberDAO.update(member);
                     if (result == 1)
                     {
                         DialogResult dialogResult
@@ -153,7 +159,7 @@ namespace ExtremeIS.Forms
                             barcodeImage.Save(path);
                             new ReportForm(member.first_name, member.last_name, member.member_id.ToString()
                                 , path).Show();
-                            
+
                         }
                     }
                     else
@@ -238,7 +244,6 @@ namespace ExtremeIS.Forms
                 else
                 {
                     pictureBoxProfilePicture.Image = Image.FromFile(picturePath);
-
                 }
             }
         }
@@ -266,7 +271,7 @@ namespace ExtremeIS.Forms
             return barcodeNumber;
         }
 
-       private Image generateBarcodeImage(String barcodeNumber)
+        private Image generateBarcodeImage(String barcodeNumber)
         {
             BarcodeLib.Barcode b = new BarcodeLib.Barcode();
             Image img = b.Encode(BarcodeLib.TYPE.UPCA, barcodeNumber

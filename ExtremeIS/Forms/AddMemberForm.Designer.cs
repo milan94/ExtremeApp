@@ -189,7 +189,6 @@ namespace ExtremeIS.Forms
             // 
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(23, 196);
             this.dateTimePickerBirthDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerBirthDate.MaxDate = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(202, 20);
             this.dateTimePickerBirthDate.TabIndex = 23;
@@ -440,12 +439,10 @@ namespace ExtremeIS.Forms
             this.dateTimePickerRegistrationDate.CustomFormat = "";
             this.dateTimePickerRegistrationDate.Location = new System.Drawing.Point(159, 35);
             this.dateTimePickerRegistrationDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerRegistrationDate.MaxDate = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
             this.dateTimePickerRegistrationDate.MinDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerRegistrationDate.Name = "dateTimePickerRegistrationDate";
             this.dateTimePickerRegistrationDate.Size = new System.Drawing.Size(181, 20);
             this.dateTimePickerRegistrationDate.TabIndex = 19;
-            this.dateTimePickerRegistrationDate.Value = new System.DateTime(2018, 1, 12, 0, 0, 0, 0);
             // 
             // lblRegistrationDate
             // 

@@ -176,7 +176,7 @@ namespace ExtremeIS.Forms
             lblFirstAndLastNameEducation.Text = member.first_name + " " + member.last_name;
             lblMeberIdProfileView.Text = member.member_id.ToString();
             
-            if ("".Equals(member.profile_picture) || member.profile_picture == null)
+            if (String.IsNullOrEmpty(member.profile_picture))
             {
                 pictureBoxProfilePicture.Image = Properties.Resources.user;
                 
@@ -185,9 +185,6 @@ namespace ExtremeIS.Forms
             else
             {
                 pictureBoxProfilePicture.Image = Image.FromFile(member.profile_picture);
-                pictureBoxProfilePictureAttendance.Image = Image.FromFile(member.profile_picture);
-                pictureBoxProfilePictureEducationLevel.Image = Image.FromFile(member.profile_picture);
-                pictureBoxProfilePictureMembershipFee.Image = Image.FromFile(member.profile_picture);
 
             }
             var lastAttendance = AttendanceDAO.getLastById(member.member_id);

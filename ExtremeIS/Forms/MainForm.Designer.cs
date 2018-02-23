@@ -41,11 +41,15 @@ namespace ExtremeIS.Forms
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGym = new System.Windows.Forms.TabPage();
             this.panelAttendance = new System.Windows.Forms.Panel();
-            this.tableAttendance = new System.Windows.Forms.TableLayoutPanel();
+            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.Clan = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Dolazak = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.panelAttendanceTop = new System.Windows.Forms.Panel();
             this.lblAttendance = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.textBoxMemberLogin = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxMemberLogin = new System.Windows.Forms.ComboBox();
+            this.lblMemberLoginFailed = new System.Windows.Forms.Label();
             this.btnDailyTicket = new System.Windows.Forms.Button();
             this.btnMemberLogin = new System.Windows.Forms.Button();
             this.picBoxMemberLogin = new System.Windows.Forms.PictureBox();
@@ -119,6 +123,7 @@ namespace ExtremeIS.Forms
             this.btnSubmitPayment = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblAddEducationLevelError = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -153,6 +158,7 @@ namespace ExtremeIS.Forms
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.tabGear = new System.Windows.Forms.TabPage();
+            this.dataGridViewGear = new System.Windows.Forms.DataGridView();
             this.groupBoxList = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnReduceAmount = new System.Windows.Forms.Button();
@@ -163,7 +169,6 @@ namespace ExtremeIS.Forms
             this.btnGearWriteOff = new System.Windows.Forms.Button();
             this.btnGearBorrowing = new System.Windows.Forms.Button();
             this.btnGearRenting = new System.Windows.Forms.Button();
-            this.tableLayoutPanelGear = new System.Windows.Forms.TableLayoutPanel();
             this.cBoxGearSearchCategory = new System.Windows.Forms.ComboBox();
             this.textBoxGearSearchTerm = new System.Windows.Forms.TextBox();
             this.lblGearSearchCategory = new System.Windows.Forms.Label();
@@ -182,12 +187,12 @@ namespace ExtremeIS.Forms
             this.comboBoxReportCategory = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxProfilePictureMemberInfo = new System.Windows.Forms.PictureBox();
-            this.lblAddEducationLevelError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabGym.SuspendLayout();
             this.panelAttendance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.panelAttendanceTop.SuspendLayout();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMemberLogin)).BeginInit();
@@ -216,6 +221,7 @@ namespace ExtremeIS.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePictureEducationLevel)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.tabGear.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGear)).BeginInit();
             this.groupBoxList.SuspendLayout();
             this.tabReports.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -264,7 +270,7 @@ namespace ExtremeIS.Forms
             // 
             this.lblLogedUser.AutoSize = true;
             this.lblLogedUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogedUser.Location = new System.Drawing.Point(50, 428);
+            this.lblLogedUser.Location = new System.Drawing.Point(42, 428);
             this.lblLogedUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogedUser.Name = "lblLogedUser";
             this.lblLogedUser.Size = new System.Drawing.Size(73, 13);
@@ -347,7 +353,7 @@ namespace ExtremeIS.Forms
             // panelAttendance
             // 
             this.panelAttendance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelAttendance.Controls.Add(this.tableAttendance);
+            this.panelAttendance.Controls.Add(this.objectListView1);
             this.panelAttendance.Controls.Add(this.panelAttendanceTop);
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelAttendance.Location = new System.Drawing.Point(403, 2);
@@ -356,27 +362,36 @@ namespace ExtremeIS.Forms
             this.panelAttendance.Size = new System.Drawing.Size(360, 447);
             this.panelAttendance.TabIndex = 1;
             // 
-            // tableAttendance
+            // objectListView1
             // 
-            this.tableAttendance.ColumnCount = 1;
-            this.tableAttendance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableAttendance.Location = new System.Drawing.Point(0, 55);
-            this.tableAttendance.Margin = new System.Windows.Forms.Padding(2);
-            this.tableAttendance.Name = "tableAttendance";
-            this.tableAttendance.RowCount = 10;
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableAttendance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableAttendance.Size = new System.Drawing.Size(360, 392);
-            this.tableAttendance.TabIndex = 1;
+            this.objectListView1.AllColumns.Add(this.Clan);
+            this.objectListView1.AllColumns.Add(this.Dolazak);
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Clan,
+            this.Dolazak});
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.objectListView1.Location = new System.Drawing.Point(0, 55);
+            this.objectListView1.Margin = new System.Windows.Forms.Padding(2);
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(360, 392);
+            this.objectListView1.TabIndex = 2;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Clan
+            // 
+            this.Clan.AspectName = "fullName";
+            this.Clan.Groupable = false;
+            this.Clan.Width = 200;
+            // 
+            // Dolazak
+            // 
+            this.Dolazak.AspectName = "checkInTime";
+            this.Dolazak.AspectToStringFormat = "{0:HH:mm:ss}";
+            this.Dolazak.Groupable = false;
+            this.Dolazak.Width = 138;
             // 
             // panelAttendanceTop
             // 
@@ -402,7 +417,9 @@ namespace ExtremeIS.Forms
             // 
             // panelLogin
             // 
-            this.panelLogin.Controls.Add(this.textBoxMemberLogin);
+            this.panelLogin.Controls.Add(this.panel2);
+            this.panelLogin.Controls.Add(this.comboBoxMemberLogin);
+            this.panelLogin.Controls.Add(this.lblMemberLoginFailed);
             this.panelLogin.Controls.Add(this.btnDailyTicket);
             this.panelLogin.Controls.Add(this.btnMemberLogin);
             this.panelLogin.Controls.Add(this.picBoxMemberLogin);
@@ -414,34 +431,57 @@ namespace ExtremeIS.Forms
             this.panelLogin.Size = new System.Drawing.Size(381, 447);
             this.panelLogin.TabIndex = 0;
             // 
-            // textBoxMemberLogin
+            // panel2
             // 
-            this.textBoxMemberLogin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBoxMemberLogin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxMemberLogin.Location = new System.Drawing.Point(77, 210);
-            this.textBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxMemberLogin.Name = "textBoxMemberLogin";
-            this.textBoxMemberLogin.Size = new System.Drawing.Size(204, 19);
-            this.textBoxMemberLogin.TabIndex = 4;
+            this.panel2.Location = new System.Drawing.Point(273, 225);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(17, 11);
+            this.panel2.TabIndex = 14;
+            // 
+            // comboBoxMemberLogin
+            // 
+            this.comboBoxMemberLogin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMemberLogin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMemberLogin.FormattingEnabled = true;
+            this.comboBoxMemberLogin.Location = new System.Drawing.Point(90, 221);
+            this.comboBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxMemberLogin.Name = "comboBoxMemberLogin";
+            this.comboBoxMemberLogin.Size = new System.Drawing.Size(203, 21);
+            this.comboBoxMemberLogin.TabIndex = 13;
+            this.comboBoxMemberLogin.TextChanged += new System.EventHandler(this.comboBoxMemberLogin_TextChanged);
+            this.comboBoxMemberLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxMemberLogin_KeyDown);
+            // 
+            // lblMemberLoginFailed
+            // 
+            this.lblMemberLoginFailed.AutoSize = true;
+            this.lblMemberLoginFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberLoginFailed.ForeColor = System.Drawing.Color.LightGray;
+            this.lblMemberLoginFailed.Location = new System.Drawing.Point(88, 243);
+            this.lblMemberLoginFailed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMemberLoginFailed.Name = "lblMemberLoginFailed";
+            this.lblMemberLoginFailed.Size = new System.Drawing.Size(137, 13);
+            this.lblMemberLoginFailed.TabIndex = 12;
+            this.lblMemberLoginFailed.Text = "Pretraga članova po imenu ";
             // 
             // btnDailyTicket
             // 
-            this.btnDailyTicket.Location = new System.Drawing.Point(77, 286);
+            this.btnDailyTicket.Location = new System.Drawing.Point(90, 321);
             this.btnDailyTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btnDailyTicket.Name = "btnDailyTicket";
             this.btnDailyTicket.Size = new System.Drawing.Size(202, 25);
-            this.btnDailyTicket.TabIndex = 3;
+            this.btnDailyTicket.TabIndex = 11;
             this.btnDailyTicket.Text = "Dnevna karta ";
             this.btnDailyTicket.UseVisualStyleBackColor = true;
             this.btnDailyTicket.Click += new System.EventHandler(this.btnDailyTicket_Click);
             // 
             // btnMemberLogin
             // 
-            this.btnMemberLogin.Location = new System.Drawing.Point(77, 233);
+            this.btnMemberLogin.Location = new System.Drawing.Point(90, 268);
             this.btnMemberLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberLogin.Name = "btnMemberLogin";
             this.btnMemberLogin.Size = new System.Drawing.Size(202, 48);
-            this.btnMemberLogin.TabIndex = 2;
+            this.btnMemberLogin.TabIndex = 10;
             this.btnMemberLogin.Text = "Prijavi člana";
             this.btnMemberLogin.UseVisualStyleBackColor = true;
             this.btnMemberLogin.Click += new System.EventHandler(this.btnMemberLogin_Click);
@@ -449,23 +489,23 @@ namespace ExtremeIS.Forms
             // picBoxMemberLogin
             // 
             this.picBoxMemberLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMemberLogin.Image")));
-            this.picBoxMemberLogin.Location = new System.Drawing.Point(136, 116);
+            this.picBoxMemberLogin.Location = new System.Drawing.Point(149, 123);
             this.picBoxMemberLogin.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxMemberLogin.Name = "picBoxMemberLogin";
             this.picBoxMemberLogin.Size = new System.Drawing.Size(75, 72);
             this.picBoxMemberLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxMemberLogin.TabIndex = 1;
+            this.picBoxMemberLogin.TabIndex = 9;
             this.picBoxMemberLogin.TabStop = false;
             // 
             // lblMemberLogin
             // 
             this.lblMemberLogin.AutoSize = true;
             this.lblMemberLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberLogin.Location = new System.Drawing.Point(118, 93);
+            this.lblMemberLogin.Location = new System.Drawing.Point(131, 100);
             this.lblMemberLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMemberLogin.Name = "lblMemberLogin";
             this.lblMemberLogin.Size = new System.Drawing.Size(128, 20);
-            this.lblMemberLogin.TabIndex = 0;
+            this.lblMemberLogin.TabIndex = 8;
             this.lblMemberLogin.Text = "Prijava članova";
             // 
             // tabMembers
@@ -1312,6 +1352,16 @@ namespace ExtremeIS.Forms
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dodaj stepen";
             // 
+            // lblAddEducationLevelError
+            // 
+            this.lblAddEducationLevelError.AutoSize = true;
+            this.lblAddEducationLevelError.ForeColor = System.Drawing.Color.Red;
+            this.lblAddEducationLevelError.Location = new System.Drawing.Point(150, 112);
+            this.lblAddEducationLevelError.Name = "lblAddEducationLevelError";
+            this.lblAddEducationLevelError.Size = new System.Drawing.Size(73, 13);
+            this.lblAddEducationLevelError.TabIndex = 5;
+            this.lblAddEducationLevelError.Text = "                      ";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1662,8 +1712,8 @@ namespace ExtremeIS.Forms
             // 
             // tabGear
             // 
+            this.tabGear.Controls.Add(this.dataGridViewGear);
             this.tabGear.Controls.Add(this.groupBoxList);
-            this.tabGear.Controls.Add(this.tableLayoutPanelGear);
             this.tabGear.Controls.Add(this.cBoxGearSearchCategory);
             this.tabGear.Controls.Add(this.textBoxGearSearchTerm);
             this.tabGear.Controls.Add(this.lblGearSearchCategory);
@@ -1676,6 +1726,15 @@ namespace ExtremeIS.Forms
             this.tabGear.TabIndex = 2;
             this.tabGear.Text = "Oprema";
             this.tabGear.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewGear
+            // 
+            this.dataGridViewGear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGear.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewGear.Location = new System.Drawing.Point(0, 255);
+            this.dataGridViewGear.Name = "dataGridViewGear";
+            this.dataGridViewGear.Size = new System.Drawing.Size(765, 196);
+            this.dataGridViewGear.TabIndex = 6;
             // 
             // groupBoxList
             // 
@@ -1787,34 +1846,6 @@ namespace ExtremeIS.Forms
             this.btnGearRenting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGearRenting.UseVisualStyleBackColor = true;
             this.btnGearRenting.Click += new System.EventHandler(this.btnGearRenting_Click);
-            // 
-            // tableLayoutPanelGear
-            // 
-            this.tableLayoutPanelGear.ColumnCount = 8;
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.82233F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.17767F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanelGear.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanelGear.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanelGear.Location = new System.Drawing.Point(0, 252);
-            this.tableLayoutPanelGear.Name = "tableLayoutPanelGear";
-            this.tableLayoutPanelGear.RowCount = 10;
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelGear.Size = new System.Drawing.Size(765, 199);
-            this.tableLayoutPanelGear.TabIndex = 4;
             // 
             // cBoxGearSearchCategory
             // 
@@ -1988,16 +2019,6 @@ namespace ExtremeIS.Forms
             this.pictureBoxProfilePictureMemberInfo.TabIndex = 9;
             this.pictureBoxProfilePictureMemberInfo.TabStop = false;
             // 
-            // lblAddEducationLevelError
-            // 
-            this.lblAddEducationLevelError.AutoSize = true;
-            this.lblAddEducationLevelError.ForeColor = System.Drawing.Color.Red;
-            this.lblAddEducationLevelError.Location = new System.Drawing.Point(150, 112);
-            this.lblAddEducationLevelError.Name = "lblAddEducationLevelError";
-            this.lblAddEducationLevelError.Size = new System.Drawing.Size(73, 13);
-            this.lblAddEducationLevelError.TabIndex = 5;
-            this.lblAddEducationLevelError.Text = "                      ";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2018,6 +2039,7 @@ namespace ExtremeIS.Forms
             this.tabControl1.ResumeLayout(false);
             this.tabGym.ResumeLayout(false);
             this.panelAttendance.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.panelAttendanceTop.ResumeLayout(false);
             this.panelAttendanceTop.PerformLayout();
             this.panelLogin.ResumeLayout(false);
@@ -2060,6 +2082,7 @@ namespace ExtremeIS.Forms
             this.groupBox4.PerformLayout();
             this.tabGear.ResumeLayout(false);
             this.tabGear.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGear)).EndInit();
             this.groupBoxList.ResumeLayout(false);
             this.groupBoxList.PerformLayout();
             this.tabReports.ResumeLayout(false);
@@ -2092,12 +2115,6 @@ namespace ExtremeIS.Forms
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Panel panelAttendanceTop;
         private System.Windows.Forms.Label lblAttendance;
-        private System.Windows.Forms.TableLayoutPanel tableAttendance;
-        private System.Windows.Forms.TextBox textBoxMemberLogin;
-        private System.Windows.Forms.Button btnDailyTicket;
-        private System.Windows.Forms.Button btnMemberLogin;
-        private System.Windows.Forms.PictureBox picBoxMemberLogin;
-        private System.Windows.Forms.Label lblMemberLogin;
         private System.Windows.Forms.ComboBox cBoxGearSearchCategory;
         private System.Windows.Forms.TextBox textBoxGearSearchTerm;
         private System.Windows.Forms.Label lblGearSearchCategory;
@@ -2110,7 +2127,6 @@ namespace ExtremeIS.Forms
         private System.Windows.Forms.Button btnGearWriteOff;
         private System.Windows.Forms.Button btnGearBorrowing;
         private System.Windows.Forms.Button btnGearRenting;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGear;
 
         private System.Windows.Forms.Button btnFindMember;
         private System.Windows.Forms.Button btnNewMember;
@@ -2229,6 +2245,17 @@ namespace ExtremeIS.Forms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAddEducationLevel;
         private System.Windows.Forms.Label lblAddEducationLevelError;
+        private System.Windows.Forms.DataGridView dataGridViewGear;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBoxMemberLogin;
+        private System.Windows.Forms.Label lblMemberLoginFailed;
+        private System.Windows.Forms.Button btnDailyTicket;
+        private System.Windows.Forms.Button btnMemberLogin;
+        private System.Windows.Forms.PictureBox picBoxMemberLogin;
+        private System.Windows.Forms.Label lblMemberLogin;
+        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private BrightIdeasSoftware.OLVColumn Clan;
+        private BrightIdeasSoftware.OLVColumn Dolazak;
     }
 }
 

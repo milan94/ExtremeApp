@@ -139,4 +139,16 @@
   <data name="defaultBarcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defaultBarcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loginERR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginERR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginFAIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginFAIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginOK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginWRN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginWRN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
